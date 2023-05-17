@@ -53,7 +53,7 @@
                         <tbody>                    
                           <tr style="text-align: center;">
                             <td style="width: 10%;"><img
-                            src="/teste/{{$resultado->foto_candidato}}" 
+                            src="/{{$resultado->foto_candidato}}" 
                             style="border-radius: 50%; max-width: 90px; max-height: 90px"
                             >
                             </td>

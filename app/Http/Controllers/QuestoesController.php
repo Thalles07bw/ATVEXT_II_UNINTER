@@ -21,7 +21,7 @@ class QuestoesController extends Controller
                 'tipo_tempo_prova' => $dados_prova[0]->id_tipo_tempo_prova
             ]);
         }else{
-            header("Location: /teste/login");
+            header("Location: /login");
             exit;
         }
     }

@@ -282,14 +282,14 @@ $(document).ready(function() {
 
       }else{
         $.ajax({
-          url: '/teste/formacao/editar',
+          url: '/formacao/editar',
           type: 'POST',
           data: data
         }).done(function(data){
           data = JSON.parse(data);
           $('.success-alert-text').html('');
           $('.success-alert-text').html(data['mensagem']);
-          $("#redirect-alert").attr("href", "/teste/formacao");
+          $("#redirect-alert").attr("href", "/formacao");
           $('#alert-ok').show();
         });
       }
@@ -299,7 +299,7 @@ $(document).ready(function() {
       e.preventDefault();
       var id = $('#id-delete').val();
       $.ajax({
-        url: '/teste/formacao/deletar/' + id,
+        url: '/formacao/deletar/' + id,
         method: 'POST',
         data: {'id': id},
         success: function(data){
@@ -362,14 +362,14 @@ $(document).ready(function() {
 
       }else{
         $.ajax({
-          url: '/teste/formacao',
+          url: '/formacao',
           type: 'POST',
           data: data
         }).done(function(data){
           data = JSON.parse(data);
           $('.success-alert-text').html('');
           $('.success-alert-text').html(data['mensagem']);
-          $("#redirect-alert").attr("href", "/teste/formacao");
+          $("#redirect-alert").attr("href", "/formacao");
           $('#alert-ok').show();
 
         });
@@ -394,7 +394,7 @@ $(document).ready(function() {
           id = id.slice(13);
           $('#id-editar').val(id);
           $.ajax({
-            url: '/teste/formacao/visualizar/' + id,
+            url: '/formacao/visualizar/' + id,
             method: 'POST',
             data: {'id': id}
           }).done(function(data){
@@ -417,7 +417,7 @@ $(document).ready(function() {
           id = id.slice(10);
       
           $.ajax({
-            url: '/teste/formacao/visualizar/' + id,
+            url: '/formacao/visualizar/' + id,
             method: 'POST',
             data: {'id': id}
           }).done(function(data){

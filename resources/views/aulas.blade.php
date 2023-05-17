@@ -270,7 +270,7 @@ $(document).ready(function(){
         let data = $("#cadastro-aula").serialize();
        
         $.ajax({
-          url: '/teste/cadastrar-aula',
+          url: '/cadastrar-aula',
           method: 'POST',
           data: data
         }).done(function(data){
@@ -279,7 +279,7 @@ $(document).ready(function(){
           if(data["flag"] == true){
             $('.success-alert-text').html('');
             $('.success-alert-text').html(data['mensagem']);
-            $("#redirect-alert").attr("href", "/teste/cadastrar-aula");
+            $("#redirect-alert").attr("href", "/cadastrar-aula");
             $('#alert-ok').show();
           }else{
             $('.error-alert-text').html('');
@@ -337,7 +337,7 @@ $(document).ready(function(){
       let data = $("#form-editar-aula").serialize();
       
       $.ajax({
-        url: '/teste/cadastrar-aula/editar',
+        url: '/cadastrar-aula/editar',
         method: 'POST',
         data: data
       }).done(function(data){
@@ -346,7 +346,7 @@ $(document).ready(function(){
         if(data["flag"] == true){
           $('.success-alert-text').html('');
           $('.success-alert-text').html(data['mensagem']);
-          $("#redirect-alert").attr("href", "/teste/cadastrar-aula#tabela-aulas");
+          $("#redirect-alert").attr("href", "/cadastrar-aula#tabela-aulas");
           $("#redirect-alert").attr("onclick", "location.reload()");
           $('#alert-ok').show();
         }else{
@@ -363,7 +363,7 @@ $(document).ready(function(){
     e.preventDefault();
     var id = $('#id-delete').val();
     $.ajax({
-      url: '/teste/cadastrar-aula/deletar/' + id,
+      url: '/cadastrar-aula/deletar/' + id,
       method: 'POST',
       data: {'id': id},
       success: function(data){
@@ -396,7 +396,7 @@ $(document).ready(function(){
         id = id.slice(13);
         $('#id-editar').val(id);
         $.ajax({
-          url: '/teste/cadastrar-aula/visualizar/' + id,
+          url: '/cadastrar-aula/visualizar/' + id,
           method: 'POST',
           data: {'id': id}
         }).done(function(data){

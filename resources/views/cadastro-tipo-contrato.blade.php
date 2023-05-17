@@ -51,8 +51,8 @@
                 <tr style="text-align: center;">
                     <td>{{$each->nome_tipo_contrato}}</td>
                     <td style="width: 40%;">
-                        <a id="botao-editar-{{$each->id_tipo_contrato}}" href="/teste/tipo-contrato/editar/{{$each->id_tipo_contrato}}" class="btn btn-success" style="margin-left: 2px; margin-bottom: 2px;">Editar</a>
-                        <a id="botao-excluir-{{$each->id_tipo_contrato}}" href="/teste/tipo-contrato/deletar/{{$each->id_tipo_contrato}}" class="btn btn-danger" style="margin-left: 2px; margin-bottom: 2px;">Excluir</a>
+                        <a id="botao-editar-{{$each->id_tipo_contrato}}" href="/tipo-contrato/editar/{{$each->id_tipo_contrato}}" class="btn btn-success" style="margin-left: 2px; margin-bottom: 2px;">Editar</a>
+                        <a id="botao-excluir-{{$each->id_tipo_contrato}}" href="/tipo-contrato/deletar/{{$each->id_tipo_contrato}}" class="btn btn-danger" style="margin-left: 2px; margin-bottom: 2px;">Excluir</a>
                     </td>
                   </tr>
                 @endforeach
@@ -109,7 +109,7 @@
       }
       else{
         $.ajax({
-          url: "/teste/tipo-contrato",
+          url: "/tipo-contrato",
           type: 'post',
           data: data
           
@@ -117,7 +117,7 @@
           data = JSON.parse(data);
           $('.success-alert-text').html('');
           $('.success-alert-text').html(data['mensagem']);
-          $("#redirect-alert").attr("href", "/teste/tipo-contrato");
+          $("#redirect-alert").attr("href", "/tipo-contrato");
           $('#alert-ok').show();
         })
     }
@@ -128,7 +128,7 @@
     e.preventDefault();
     var id = $('#id-delete').val();
     $.ajax({
-      url: '/teste/tipo-contrato/deletar/' + id,
+      url: '/tipo-contrato/deletar/' + id,
       method: 'POST',
       data: {'id': id},
       success: function(data){
@@ -153,7 +153,7 @@ $("#form-editar-tipo-contrato").on('submit', function(e){
       }
       else{
         $.ajax({
-          url: "/teste/tipo-contrato/editar",
+          url: "/tipo-contrato/editar",
           type: 'post',
           data: data
           
@@ -161,7 +161,7 @@ $("#form-editar-tipo-contrato").on('submit', function(e){
           data = JSON.parse(data);
           $('.success-alert-text').html('');
           $('.success-alert-text').html(data['mensagem']);
-          $("#redirect-alert").attr("href", "/teste/tipo-contrato");
+          $("#redirect-alert").attr("href", "/tipo-contrato");
           $('#alert-ok').show();
         })
     }
@@ -187,7 +187,7 @@ $('#tabela-tipo-contrato').DataTable({
       id = id.slice(13);
       $('#id-editar').val(id);
       $.ajax({
-        url: '/teste/tipo-contrato/visualizar/' + id,
+        url: '/tipo-contrato/visualizar/' + id,
         method: 'POST',
         data: {'id': id}
       }).done(function(data){

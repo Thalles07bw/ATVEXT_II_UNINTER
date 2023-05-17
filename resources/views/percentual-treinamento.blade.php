@@ -88,7 +88,7 @@
                   <td>{{$participante->qtd_presencas}}/{{$participante->qtd_aulas}}</td>
                   @if($participante->caminho_arquivo != NULL)
                   <td style="width: 20%;">
-                      <a href="/teste/storage/app/{{$participante->caminho_arquivo}}"  class="btn btn-primary" style="margin-left: 2px; margin-bottom: 2px;">Ver Certificado</a>
+                      <a href="/storage/app/{{$participante->caminho_arquivo}}"  class="btn btn-primary" style="margin-left: 2px; margin-bottom: 2px;">Ver Certificado</a>
                   </td>
                   @else
                   <td style="width: 20%;">

@@ -51,8 +51,8 @@
               <tr style="text-align: center;">
                   <td>{{$each->nome_parentesco}}</td>
                   <td style="width: 40%;">
-                      <a id="botao-editar-{{$each->id_parentesco}}" href="/teste/cadastro-parentesco/editar/{{$each->id_parentesco}}" class="btn btn-success" style="margin-left: 2px; margin-bottom: 2px;">Editar</a>
-                      <a id="botao-excluir-{{$each->id_parentesco}}" href="/teste/cadastro-parentesco/deletar/{{$each->id_parentesco}}" class="btn btn-danger" style="margin-left: 2px; margin-bottom: 2px;">Excluir</a>
+                      <a id="botao-editar-{{$each->id_parentesco}}" href="/cadastro-parentesco/editar/{{$each->id_parentesco}}" class="btn btn-success" style="margin-left: 2px; margin-bottom: 2px;">Editar</a>
+                      <a id="botao-excluir-{{$each->id_parentesco}}" href="/cadastro-parentesco/deletar/{{$each->id_parentesco}}" class="btn btn-danger" style="margin-left: 2px; margin-bottom: 2px;">Excluir</a>
                   </td>
                 </tr>
               @endforeach
@@ -109,7 +109,7 @@ $(document).ready(function(){
       }
       else{
         $.ajax({
-          url: "/teste/cadastro-parentesco",
+          url: "/cadastro-parentesco",
           type: 'post',
           data: data
           
@@ -117,7 +117,7 @@ $(document).ready(function(){
           data = JSON.parse(data);
           $('.success-alert-text').html('');
           $('.success-alert-text').html(data['mensagem']);
-          $("#redirect-alert").attr("href", "/teste/cadastro-parentesco");
+          $("#redirect-alert").attr("href", "/cadastro-parentesco");
           $('#alert-ok').show();
         })
     }
@@ -136,7 +136,7 @@ $(document).ready(function(){
     }
     else{
       $.ajax({
-        url: "/teste/cadastro-parentesco/editar",
+        url: "/cadastro-parentesco/editar",
         type: 'post',
         data: data
         
@@ -144,7 +144,7 @@ $(document).ready(function(){
         data = JSON.parse(data);
         $('.success-alert-text').html('');
         $('.success-alert-text').html(data['mensagem']);
-        $("#redirect-alert").attr("href", "/teste/cadastro-parentesco");
+        $("#redirect-alert").attr("href", "/cadastro-parentesco");
         $('#alert-ok').show();
       })
     }
@@ -155,7 +155,7 @@ $(document).ready(function(){
     e.preventDefault();
     var id = $('#id-delete').val();
     $.ajax({
-      url: '/teste/cadastro-parentesco/deletar/' + id,
+      url: '/cadastro-parentesco/deletar/' + id,
       method: 'POST',
       data: {'id': id},
       success: function(data){
@@ -188,7 +188,7 @@ $(document).ready(function(){
         id = id.slice(13);
         $('#id-editar').val(id);
         $.ajax({
-          url: '/teste/cadastro-parentesco/visualizar/' + id,
+          url: '/cadastro-parentesco/visualizar/' + id,
           method: 'POST',
           data: {'id': id}
         }).done(function(data){

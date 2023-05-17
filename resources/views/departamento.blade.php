@@ -84,9 +84,9 @@
                     <td>{{$each->ramal_departamento}}</td>
                     <td>{{date('d/m/Y', strtotime($each->data_criacao))}}</td>
                     <td style="width: 25%;">
-                        <a id="botao-ver-{{$each->id_departamento}}" href="/teste/departamentos/visualizar/" class="btn btn-primary" style="margin-bottom: 2px;"> Ver</a>
-                        <a id="botao-editar-{{$each->id_departamento}}" href="/teste/departamentos/editar/" class="btn btn-success" style="margin-left: 2px; margin-bottom: 2px;">Editar</a>
-                        <a id="botao-excluir-{{$each->id_departamento}}" href="/teste/departamentos/deletar/" class="btn btn-danger" style="margin-left: 2px; margin-bottom: 2px;">Excluir</a>
+                        <a id="botao-ver-{{$each->id_departamento}}" href="/departamentos/visualizar/" class="btn btn-primary" style="margin-bottom: 2px;"> Ver</a>
+                        <a id="botao-editar-{{$each->id_departamento}}" href="/departamentos/editar/" class="btn btn-success" style="margin-left: 2px; margin-bottom: 2px;">Editar</a>
+                        <a id="botao-excluir-{{$each->id_departamento}}" href="/departamentos/deletar/" class="btn btn-danger" style="margin-left: 2px; margin-bottom: 2px;">Excluir</a>
                     </td>
                   </tr>
                   @endforeach
@@ -215,7 +215,7 @@ $(document).ready(function() {
       id = id.slice(10);
    
       $.ajax({
-        url: '/teste/departamentos/visualizar/' + id,
+        url: '/departamentos/visualizar/' + id,
         method: 'POST',
         data: {'id': id}
       }).done(function(data){
@@ -276,14 +276,14 @@ $(document).ready(function() {
 
       }else{
         $.ajax({
-          url: '/teste/departamentos/editar',
+          url: '/departamentos/editar',
           type: 'POST',
           data: data
         }).done(function(data){
           data = JSON.parse(data);
           $('.success-alert-text').html('');
           $('.success-alert-text').html(data['mensagem']);
-          $("#redirect-alert").attr("href", "/teste/departamentos");
+          $("#redirect-alert").attr("href", "/departamentos");
           $('#alert-ok').show();
 
         });
@@ -298,7 +298,7 @@ $(document).ready(function() {
       e.preventDefault();
       var id = $('#id-delete').val();
       $.ajax({
-        url: '/teste/departamentos/deletar/' + id,
+        url: '/departamentos/deletar/' + id,
         method: 'POST',
         data: {'id': id},
         success: function(data){
@@ -347,14 +347,14 @@ $(document).ready(function() {
 
       }else{
         $.ajax({
-          url: '/teste/departamentos',
+          url: '/departamentos',
           type: 'POST',
           data: data
         }).done(function(data){
           data = JSON.parse(data);
           $('.success-alert-text').html('');
           $('.success-alert-text').html(data['mensagem']);
-          $("#redirect-alert").attr("href", "/teste/departamentos");
+          $("#redirect-alert").attr("href", "/departamentos");
           $('#alert-ok').show();
 
         });
@@ -379,7 +379,7 @@ $(document).ready(function() {
           id = id.slice(13);
           $('#id-editar').val(id);
           $.ajax({
-            url: '/teste/departamentos/visualizar/' + id,
+            url: '/departamentos/visualizar/' + id,
             method: 'POST',
             data: {'id': id}
           }).done(function(data){

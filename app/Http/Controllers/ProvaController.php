@@ -357,7 +357,7 @@ class ProvaController extends Controller
                 'tabela' => $tabela
             ]);
         }else{
-            header("Location: /teste/login");
+            header("Location: /login");
             exit;
         }
     }
@@ -379,7 +379,7 @@ class ProvaController extends Controller
                 'tabela' => $tabela
             ]);
         }else{
-            header("Location: /teste/login");
+            header("Location: /login");
             exit;
         }
     }

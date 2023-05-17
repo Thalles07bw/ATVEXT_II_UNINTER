@@ -206,10 +206,10 @@
              
               <tr style="text-align: center;">
                 <td style="width: 10%;"><img id="foto-click-{{$each->id_colaborador}}" 
-                src="/teste/storage/app/images/employees/{{$each->foto_colaborador}}" 
+                src="/storage/app/images/employees/{{$each->foto_colaborador}}" 
                 width="70px" height="70px" style="border-radius: 50%; cursor: pointer"
-                onmouseover="this.src='/teste/storage/app/images/employees/change.png'; this.style.opacity=0.5"
-								onmouseout="this.src='/teste/storage/app/images/employees/{{$each->foto_colaborador}}'; this.style.opacity=1"
+                onmouseover="this.src='/storage/app/images/employees/change.png'; this.style.opacity=0.5"
+								onmouseout="this.src='/storage/app/images/employees/{{$each->foto_colaborador}}'; this.style.opacity=1"
                 >
                 <form id="troca-foto-{{$each->id_colaborador}}">
 										@csrf
@@ -885,7 +885,7 @@ $(document).ready(function(){
       }
       else{
         $.ajax({
-          url: "/teste/colaborador",
+          url: "/colaborador",
           type: 'post',
           data: data
           
@@ -894,7 +894,7 @@ $(document).ready(function(){
           if(data["flag"] == true){
             $('.success-alert-text').html('');
             $('.success-alert-text').html(data['mensagem']);
-            $("#redirect-alert").attr("href", "/teste/colaborador");
+            $("#redirect-alert").attr("href", "/colaborador");
             $('#alert-ok').show();
           }else{
             $('.error-alert-text').html('');
@@ -1035,7 +1035,7 @@ $(document).ready(function(){
     }
     else{
       $.ajax({
-        url: "/teste/colaborador/editar-principais",
+        url: "/colaborador/editar-principais",
         type: 'post',
         data: data
         
@@ -1056,7 +1056,7 @@ $(document).ready(function(){
     var data = $("#form-editar-documentos").serialize();
 
       $.ajax({
-        url: "/teste/colaborador/editar-documentos",
+        url: "/colaborador/editar-documentos",
         type: 'post',
         data: data
         
@@ -1077,7 +1077,7 @@ $(document).ready(function(){
     var data = $("#form-editar-bancarios").serialize();
 
       $.ajax({
-        url: "/teste/colaborador/editar-bancarios",
+        url: "/colaborador/editar-bancarios",
         type: 'post',
         data: data
         
@@ -1098,7 +1098,7 @@ $(document).ready(function(){
     var data = $("#form-editar-outros").serialize();
 
       $.ajax({
-        url: "/teste/colaborador/editar-outros",
+        url: "/colaborador/editar-outros",
         type: 'post',
         data: data
         
@@ -1119,7 +1119,7 @@ $(document).ready(function(){
     var data = $("#form-editar-beneficios").serialize();
 
       $.ajax({
-        url: "/teste/colaborador/editar-beneficios",
+        url: "/colaborador/editar-beneficios",
         type: 'post',
         data: data
         
@@ -1139,7 +1139,7 @@ $(document).ready(function(){
     e.preventDefault();
     var id = $('#id-delete').val();
     $.ajax({
-      url: '/teste/cadastro-parentesco/deletar/' + id,
+      url: '/cadastro-parentesco/deletar/' + id,
       method: 'POST',
       data: {'id': id},
       success: function(data){
@@ -1168,7 +1168,7 @@ $(document).ready(function(){
     form_data.append("photo", photo);
 		
 			$.ajax({
-				url:'/teste/atualiza-foto-colaborador',
+				url:'/atualiza-foto-colaborador',
 				method: 'post',
 				dataType: 'script',
       	cache: false,
@@ -1218,7 +1218,7 @@ function formControlReset(){
         $('#id-editar').val(id);
         $('#editar-principais').modal('show');
         $.ajax({
-          url: '/teste/colaborador/visualizar-principais/' + id,
+          url: '/colaborador/visualizar-principais/' + id,
           method: 'POST',
           data: {'id': id}
         }).done(function(data){
@@ -1268,7 +1268,7 @@ function formControlReset(){
         $('#id-editar').val(id);
         $('#editar-documentos').modal('show');
         $.ajax({
-          url: '/teste/colaborador/visualizar-documentos/' + id,
+          url: '/colaborador/visualizar-documentos/' + id,
           method: 'POST',
           data: {'id': id}
         }).done(function(data){
@@ -1300,7 +1300,7 @@ function formControlReset(){
         $('#id-editar-bancarios').val(id);
         $('#editar-bancarios').modal('show');
         $.ajax({
-          url: '/teste/colaborador/visualizar-bancarios/' + id,
+          url: '/colaborador/visualizar-bancarios/' + id,
           method: 'POST',
           data: {'id': id}
         }).done(function(data){
@@ -1323,7 +1323,7 @@ function formControlReset(){
         $('#id-editar-beneficios').val(id);
         $('#editar-beneficios').modal('show');
         $.ajax({
-          url: '/teste/colaborador/visualizar-beneficios/' + id,
+          url: '/colaborador/visualizar-beneficios/' + id,
           method: 'POST',
           data: {'id': id}
         }).done(function(data){
@@ -1344,7 +1344,7 @@ function formControlReset(){
         $('#id-editar-outros').val(id);
         $('#editar-outros').modal('show');
         $.ajax({
-          url: '/teste/colaborador/visualizar-outros/' + id,
+          url: '/colaborador/visualizar-outros/' + id,
           method: 'POST',
           data: {'id': id}
         }).done(function(data){

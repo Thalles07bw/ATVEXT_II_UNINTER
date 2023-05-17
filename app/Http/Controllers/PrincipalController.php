@@ -61,7 +61,7 @@ class PrincipalController extends Controller
                 'npcd' => $npcd[0]->qtd_colab,
             ]);
         }else{
-            header("Location: /teste/login");
+            header("Location: /login");
             exit;
         }
     }

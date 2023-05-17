@@ -57,7 +57,7 @@ class ClasseRegistro{
       $endereço_local = '189.126.111.90';
       $assunto = utf8_decode('Criação de senha de acesso');
       $corpo = utf8_decode("<p>Aqui está o link para a criar sua senha de acesso 
-      <br><b> Link: </b><a href='http://".$endereço_local."/teste/nova-senha?token=".$valor_token."'>
+      <br><b> Link: </b><a href='http://".$endereço_local."/nova-senha?token=".$valor_token."'>
       Clique Aqui</a></p>");
 
       DB::insert('INSERT INTO tb_token_senha (token, usuario_token) 

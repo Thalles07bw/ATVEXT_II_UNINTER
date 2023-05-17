@@ -18,7 +18,7 @@ class ContratoController extends Controller
                 'tabela' => $tabela
             ]);
         }else{
-            header("location: /teste/login");
+            header("location: /login");
             exit;
         }
     }

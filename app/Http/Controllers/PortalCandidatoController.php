@@ -28,11 +28,11 @@ class PortalCandidatoController extends Controller
                 'provas_pendentes' => $avaliacoes
                 ]);
             }else{
-                header("Location: /teste/curriculo");
+                header("Location: /curriculo");
                 exit;
             }
         }else{
-            header("Location: /teste/login-candidato");
+            header("Location: /login-candidato");
             exit;
         }
        

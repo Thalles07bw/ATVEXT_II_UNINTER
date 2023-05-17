@@ -27,7 +27,7 @@ class BeneficioController extends Controller
                 'arrayTabela' => $arrayTabela
             ]);
         }else{
-           header("Location: /teste/login");
+           header("Location: /login");
             exit;
         }
 

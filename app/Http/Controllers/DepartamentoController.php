@@ -17,7 +17,7 @@ class DepartamentoController extends Controller
             'tabela' => $arrayTabela
             ]);
         }else{
-            header("Location: /teste/login");
+            header("Location: /login");
             exit;
         } 
     }

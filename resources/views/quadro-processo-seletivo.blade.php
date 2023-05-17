@@ -7,7 +7,7 @@
 @include('alerts.alert-modal-error')
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb" style="float: right; background-color: #f9f9f9;">
-    <li class="breadcrumb-item"><a href="/teste/cadastro-vagas">Vagas</a></li>
+    <li class="breadcrumb-item"><a href="/cadastro-vagas">Vagas</a></li>
     <li class="breadcrumb-item active" aria-current="page">Processos Seletivos</li>
   </ol>
 </nav>
@@ -51,7 +51,7 @@
                           </div>
                           <div class="col-md-6">
                             <div class="row" style="margin-left: 1px;">
-                              <a href="/teste/ver-curriculo/{{$candidato->id_candidato}}" class="btn btn-primary btn-sm"  style="margin: 5px 5px 5px 5px;">Ver Curriculo</a>
+                              <a href="/ver-curriculo/{{$candidato->id_candidato}}" class="btn btn-primary btn-sm"  style="margin: 5px 5px 5px 5px;">Ver Curriculo</a>
                               <a class="btn btn-danger btn-sm" style="margin: 5px 5px 5px 5px;">Eliminar</a>
                             </div>
                           </div>

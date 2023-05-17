@@ -80,7 +80,7 @@
                       </datalist></td>
                     <td style="width: 25%;">
                         <a id="botao-salvar-{{$each->id_habilidade_candidato}}"  class="btn btn-success" style="margin-left: 2px; margin-bottom: 2px; display: none">Salvar</a>
-                        <a id="botao-excluir-{{$each->id_habilidade_candidato}}" href="/teste/habilidade/deletar/" class="btn btn-danger" style="margin-left: 2px; margin-bottom: 2px;">Excluir</a>
+                        <a id="botao-excluir-{{$each->id_habilidade_candidato}}" href="/habilidade/deletar/" class="btn btn-danger" style="margin-left: 2px; margin-bottom: 2px;">Excluir</a>
                     </td>
                   </tr>
                   @endforeach
@@ -131,7 +131,7 @@ $(document).ready(function() {
 
     }else{
       $.ajax({
-        url: '/teste/habilidades',
+        url: '/habilidades',
         type: 'POST',
         data: data
       }).done(function(data){
@@ -140,7 +140,7 @@ $(document).ready(function() {
         if(data['flag'] == true){
           $('.success-alert-text').html('');
           $('.success-alert-text').html(data['mensagem']);
-          $("#redirect-alert").attr("href", "/teste/habilidades");
+          $("#redirect-alert").attr("href", "/habilidades");
           $('#alert-ok').show();
         }else{
           $('.error-alert-text').html('');
@@ -157,7 +157,7 @@ $(document).ready(function() {
   e.preventDefault();
   var id = $('#id-delete').val();
   $.ajax({
-    url: '/teste/habilidades/deletar/' + id,
+    url: '/habilidades/deletar/' + id,
     method: 'POST',
     data: {'id': id},
     success: function(data){
@@ -185,7 +185,7 @@ $(document).ready(function() {
         let botao = "#botao-salvar-"+id;
         $(botao).hide();
         $.ajax({
-          url:"/teste/salvar-alteracoes-habilidade",
+          url:"/salvar-alteracoes-habilidade",
           method: "post",
           data: {'id_habilidade_candidato': id, 'nivel_habilidade_candidato': nivel}
         }).done(function(data){

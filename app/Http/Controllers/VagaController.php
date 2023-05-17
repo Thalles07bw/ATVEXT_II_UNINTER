@@ -245,7 +245,7 @@ class VagaController extends Controller
         $id_candidato = $request->input('id_candidato');
         
         if($id_candidato == NULL){
-            $falha_autenticacao = array('autenticacao' => false, 'redirect' => "/teste/login-candidato");
+            $falha_autenticacao = array('autenticacao' => false, 'redirect' => "/login-candidato");
             echo json_encode($falha_autenticacao);
             exit;
         }

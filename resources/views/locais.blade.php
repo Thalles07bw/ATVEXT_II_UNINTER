@@ -285,7 +285,7 @@ $(document).ready(function(){
       let data = $("#cadastrar-sala-aula").serialize();
 
       $.ajax({
-        url: '/teste/salas-de-aula',
+        url: '/salas-de-aula',
         method: 'POST',
         data: data
       }).done(function(data){
@@ -295,7 +295,7 @@ $(document).ready(function(){
         if(data["flag"] == true){
             $('.success-alert-text').html('');
             $('.success-alert-text').html(data['mensagem']);
-            $("#redirect-alert").attr("href", "/teste/salas-de-aula");
+            $("#redirect-alert").attr("href", "/salas-de-aula");
             $('#alert-ok').show();
         }else{
           $('.error-alert-text').html('');
@@ -340,7 +340,7 @@ $(document).ready(function(){
       let data = $("#form-editar-local").serialize();
 
       $.ajax({
-        url: '/teste/salas-de-aula/editar',
+        url: '/salas-de-aula/editar',
         method: 'POST',
         data: data
       }).done(function(data){
@@ -366,7 +366,7 @@ $(document).ready(function(){
     e.preventDefault();
     var id = $('#id-delete').val();
     $.ajax({
-      url: '/teste/salas-de-aula/deletar/' + id,
+      url: '/salas-de-aula/deletar/' + id,
       method: 'POST',
       data: {'id': id},
       success: function(data){
@@ -399,7 +399,7 @@ $(document).ready(function(){
         id = id.slice(13);
         $('#id-editar').val(id);
         $.ajax({
-          url: '/teste/salas-de-aula/visualizar/' + id,
+          url: '/salas-de-aula/visualizar/' + id,
           method: 'POST',
           data: {'id': id}
         }).done(function(data){

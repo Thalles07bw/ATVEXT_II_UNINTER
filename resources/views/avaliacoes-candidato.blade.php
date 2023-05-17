@@ -42,7 +42,7 @@
                     @endif
                     @if($linha->prova_feita == 0 && $linha->data_limite >= date('Y-m-d'))
                     <td style="width: 20%;">
-                      <a href="/teste/prova/{{$linha->id_prova}}?token={{$linha->token}}" class="btn btn-success" style="margin-left: 2px; margin-bottom: 2px;">Fazer Avaliação</a>
+                      <a href="/prova/{{$linha->id_prova}}?token={{$linha->token}}" class="btn btn-success" style="margin-left: 2px; margin-bottom: 2px;">Fazer Avaliação</a>
                     </td>
                     @else
                     <td style="width: 20%;">
@@ -66,7 +66,7 @@
     e.preventDefault();
     var id = $('#id-cancel').val();
     $.ajax({
-      url: '/teste/candidaturas/cancelar/' + id,
+      url: '/candidaturas/cancelar/' + id,
       method: 'POST',
       data: {'id': id},
       success: function(data){

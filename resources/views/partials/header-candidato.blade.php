@@ -21,7 +21,7 @@
 
     <!-- Custom fonts for this template-->
     <link
-      href="resources/css/fontawesome-free/all.min.css"
+      href="/css/fontawesome-free/all.min.css"
       rel="stylesheet"
       type="text/css"
     />
@@ -31,7 +31,7 @@
     />
 
     <!-- Custom styles for this template-->
-    <link href="resources/css/sb-admin2/sb-admin-2.min.css" rel="stylesheet" />
+    <link href="/css/sb-admin2/sb-admin-2.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <!-- include summernote css/js -->
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
@@ -53,10 +53,10 @@
           href="teste/portal-do-candidato"
         >
           <div class="sidebar-brand-icon">
-            <img src="resources/img/logo.png" width=50px>
+            <img src="/img/logo.png" width=50px>
           </div>
           <div class="sidebar-brand-text mx-3" style="color: orange">
-            <img src="resources/img/logo_letras.png" width=50px>
+            <img src="/img/logo_letras.png" width=50px>
           </div>
         </a>
         @if(isset($dados_candidato))
@@ -65,7 +65,7 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
-          <a class="nav-link" href="/teste/portal-do-candidato">
+          <a class="nav-link" href="/portal-do-candidato">
             <i class="fas fa-fw fa-home"></i>
             <span>Principal</span></a
           >
@@ -93,18 +93,18 @@
             data-parent="#accordionSidebar"
           >
             <div class="bg-white py-2 collapse-inner rounded">
-              <a class="collapse-item" href="/teste/curriculo">Dados principais</a>
-              <a class="collapse-item" href="/teste/formacao">Formação</a>   
-              <a class="collapse-item" href="/teste/idiomas">Idiomas</a> 
-              <a class="collapse-item" href="/teste/habilidades">Habilidades Extras</a>
-              <a class="collapse-item" href="/teste/habilitacao">Habilitação (CNH)</a>    
+              <a class="collapse-item" href="/curriculo">Dados principais</a>
+              <a class="collapse-item" href="/formacao">Formação</a>   
+              <a class="collapse-item" href="/idiomas">Idiomas</a> 
+              <a class="collapse-item" href="/habilidades">Habilidades Extras</a>
+              <a class="collapse-item" href="/habilitacao">Habilitação (CNH)</a>    
             </div>
           </div>
         </li>
 
 
         <li class="nav-item">
-          <a class="nav-link" href="/teste/avaliacoes-candidato">
+          <a class="nav-link" href="/avaliacoes-candidato">
             <i class="fas fa-fw fa-pencil-alt"></i>
             <span>Minhas Avaliações &nbsp;
               @if($provas_pendentes != 0)
@@ -114,7 +114,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/teste/candidaturas">
+          <a class="nav-link" href="/candidaturas">
             <i class="fas fa-fw fa-check-circle"></i>
             <span>Minhas Candidaturas</span></a
           >

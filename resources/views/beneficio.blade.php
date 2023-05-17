@@ -110,9 +110,9 @@
                     <td>{{$tabela->valor_descontado}}</td>
                     <td>{{$tabela->data}}</td>
                     <td style="width: 25%;">
-                        <a id="botao-ver-{{$tabela->id_beneficio}}" href="/teste/beneficios/visualizar/{{$tabela->id_beneficio}}" class="btn btn-primary" style="margin-bottom: 2px;"> Ver</a>
-                        <a id="botao-editar-{{$tabela->id_beneficio}}" href="/teste/beneficios/editar/{{$tabela->id_beneficio}}" class="btn btn-success" style="margin-left: 2px; margin-bottom: 2px;">Editar</a>
-                        <a id="botao-excluir-{{$tabela->id_beneficio}}" href="/teste/beneficios/deletar/{{$tabela->id_beneficio}}" class="btn btn-danger" style="margin-left: 2px; margin-bottom: 2px;">Excluir</a>
+                        <a id="botao-ver-{{$tabela->id_beneficio}}" href="/beneficios/visualizar/{{$tabela->id_beneficio}}" class="btn btn-primary" style="margin-bottom: 2px;"> Ver</a>
+                        <a id="botao-editar-{{$tabela->id_beneficio}}" href="/beneficios/editar/{{$tabela->id_beneficio}}" class="btn btn-success" style="margin-left: 2px; margin-bottom: 2px;">Editar</a>
+                        <a id="botao-excluir-{{$tabela->id_beneficio}}" href="/beneficios/deletar/{{$tabela->id_beneficio}}" class="btn btn-danger" style="margin-left: 2px; margin-bottom: 2px;">Excluir</a>
                     </td>
                   </tr>
                   @endforeach
@@ -293,7 +293,7 @@ $(document).ready(function() {
       id = id.slice(10);
    
       $.ajax({
-        url: '/teste/beneficios/visualizar/' + id,
+        url: '/beneficios/visualizar/' + id,
         method: 'POST',
         data: {'id': id}
       }).done(function(data){
@@ -370,14 +370,14 @@ $(document).ready(function() {
 
       }else{
         $.ajax({
-          url: '/teste/beneficios/editar',
+          url: '/beneficios/editar',
           type: 'POST',
           data: data
         }).done(function(data){
           data = JSON.parse(data);
           $('.success-alert-text').html('');
           $('.success-alert-text').html(data['mensagem']);
-          $("#redirect-alert").attr("href", "/teste/beneficios");
+          $("#redirect-alert").attr("href", "/beneficios");
           $('#alert-ok').show();
 
         });
@@ -391,7 +391,7 @@ $(document).ready(function() {
       e.preventDefault();
       var id = $('#id-delete').val();
       $.ajax({
-        url: '/teste/beneficios/deletar/' + id,
+        url: '/beneficios/deletar/' + id,
         method: 'POST',
         data: {'id': id},
         success: function(data){
@@ -459,14 +459,14 @@ $(document).ready(function() {
 
       }else{
         $.ajax({
-          url: '/teste/beneficios',
+          url: '/beneficios',
           type: 'POST',
           data: data
         }).done(function(data){
           data = JSON.parse(data);
           $('.success-alert-text').html('');
           $('.success-alert-text').html(data['mensagem']);
-          $("#redirect-alert").attr("href", "/teste/beneficios");
+          $("#redirect-alert").attr("href", "/beneficios");
           $('#alert-ok').show();
 
         });
@@ -491,7 +491,7 @@ $(document).ready(function() {
             id = id.slice(13);
             $('#id-editar').val(id);
             $.ajax({
-              url: '/teste/beneficios/visualizar/' + id,
+              url: '/beneficios/visualizar/' + id,
               method: 'POST',
               data: {'id': id}
             }).done(function(data){

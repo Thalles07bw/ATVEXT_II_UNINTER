@@ -14,11 +14,11 @@
 			<div class="col-md-4" style="padding-bottom: 10px;">
 					<div class="card border-left-danger shadow h-100 py-2">
 						<div class="card-body" style="text-align: center;">
-								<img  id="foto-click" src="/teste{{$dados_candidato->foto_candidato}}" 
+								<img  id="foto-click" src="{{$dados_candidato->foto_candidato}}" 
 								alt="User profile picture" width="128px" height="128px" style="border-radius: 50%; 
 								cursor: pointer" 
-								onmouseover="this.src='/teste/storage/app/images/users/change.png'; this.style.opacity=0.5"
-								onmouseout="this.src='/teste{{$dados_candidato->foto_candidato}}'; this.style.opacity=1">
+								onmouseover="this.src='/storage/app/images/users/change.png'; this.style.opacity=0.5"
+								onmouseout="this.src='{{$dados_candidato->foto_candidato}}'; this.style.opacity=1">
 								<form id="troca-foto">
 										@csrf
 										<input type="file" id="FileInput" style="cursor: pointer;  display: none"/>
@@ -80,7 +80,7 @@
     form_data.append("photo", photo);
 		
 			$.ajax({
-				url:'/teste/atualiza-foto',
+				url:'/atualiza-foto',
 				method: 'post',
 				dataType: 'script',
       	cache: false,

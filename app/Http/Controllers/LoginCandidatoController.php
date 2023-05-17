@@ -45,7 +45,7 @@ class LoginCandidatoController extends Controller
         $_SESSION['email_usuario_candidato'] = $dados->email_usuario_candidato;
         $_SESSION['cpf_usuario_candidato'] = $dados->cpf_usuario_candidato;
 
-        header ("Location: /teste/portal-do-candidato");
+        header ("Location: /portal-do-candidato");
         exit;
     }
 }

@@ -81,7 +81,7 @@
                   <td>{{$linha->descricao_treinamento}}</td>
                   <td>{{$linha->nome_tipo_arquivo}}
                   <td style="width: 40%;">
-                      <a  href="/teste/storage/app/{{$linha->caminho_arquivo}}"class="btn btn-success" style="margin-left: 2px; margin-bottom: 2px;">Ver</a>
+                      <a  href="/storage/app/{{$linha->caminho_arquivo}}"class="btn btn-success" style="margin-left: 2px; margin-bottom: 2px;">Ver</a>
                   </td>
                 </tr>
                 @endforeach
@@ -153,7 +153,7 @@ $(document).ready(function(){
       form_data.append("arquivo",arquivo);
 
       $.ajax({
-      url:'/teste/inserir-arquivos-treinamento',
+      url:'/inserir-arquivos-treinamento',
       method: 'POST',
       dataType: 'script',
       cache: false,
@@ -164,7 +164,7 @@ $(document).ready(function(){
       data = JSON.parse(data);
       console.log(data);
       $('.success-alert-text').html(data['mensagem']);
-      $("#redirect-alert").attr("href", "/teste/inserir-arquivos-treinamento");
+      $("#redirect-alert").attr("href", "/inserir-arquivos-treinamento");
       $('#alert-ok').show();
     });
   });
@@ -180,7 +180,7 @@ $(document).ready(function(){
     e.preventDefault();
     var id = $('#id-delete').val();
     $.ajax({
-      url: '/teste/cadastro-/deletar/' + id,
+      url: '/cadastro-/deletar/' + id,
       method: 'POST',
       data: {'id': id},
       success: function(data){
@@ -200,7 +200,7 @@ $(document).ready(function(){
 
     $.ajax({
 
-      url:'/teste/filtrar-participantes-treinamento',
+      url:'/filtrar-participantes-treinamento',
       method: 'post',
       data: {'treinamento' : treinamento},
       success: function(data){
@@ -241,7 +241,7 @@ $(document).ready(function(){
         id = id.slice(13);
         $('#id-editar').val(id);
         $.ajax({
-          url: '/teste/cadastro-/visualizar/' + id,
+          url: '/cadastro-/visualizar/' + id,
           method: 'POST',
           data: {'id': id}
         }).done(function(data){

@@ -334,14 +334,14 @@ $(document).ready(function(){
       let data = $("#cadastro-empresa").serialize();
 
       $.ajax({
-        url: '/teste/cadastrar-empresa',
+        url: '/cadastrar-empresa',
         type: 'post',
         data: data
       }).done(function(data){
         data = JSON.parse(data)
         $('.success-alert-text').html('');
         $('.success-alert-text').html(data['mensagem']);
-        $("#redirect-alert").attr("href", "/teste/cadastrar-empresa");
+        $("#redirect-alert").attr("href", "/cadastrar-empresa");
         $('#alert-ok').show();
       })
     }
@@ -399,7 +399,7 @@ $(document).ready(function(){
     }else{
       let data = $("#form-editar-empresa").serialize();
       $.ajax({
-        url: '/teste/cadastrar-empresa/editar',
+        url: '/cadastrar-empresa/editar',
         type: 'post',
         data: data
       }).done(function(data){
@@ -407,7 +407,7 @@ $(document).ready(function(){
         console.log(data)
         $('.success-alert-text').html('');
         $('.success-alert-text').html(data['mensagem']);
-        $("#redirect-alert").attr("href", "/teste/cadastrar-empresa");
+        $("#redirect-alert").attr("href", "/cadastrar-empresa");
         $('#alert-ok').show();
       })
     }
@@ -418,7 +418,7 @@ $(document).ready(function(){
     e.preventDefault();
     var id = $('#id-delete').val();
     $.ajax({
-      url: '/teste/cadastro-/deletar/' + id,
+      url: '/cadastro-/deletar/' + id,
       method: 'POST',
       data: {'id': id},
       success: function(data){
@@ -434,13 +434,13 @@ $(document).ready(function(){
     e.preventDefault();
     var id = $('#id-gerenciamento').val();
     $.ajax({
-      url: '/teste/cadastrar-empresa/alterar/' + id,
+      url: '/cadastrar-empresa/alterar/' + id,
       method: 'POST',
       data: {'id': id},
       success: function(data){
         data = JSON.parse(data);
         alert(data);
-        window.location.href = "/teste/principal";
+        window.location.href = "/principal";
       }
     });
   });
@@ -467,7 +467,7 @@ $(document).ready(function(){
         id = id.slice(13);
         $('#id-editar').val(id);
         $.ajax({
-          url: '/teste/cadastrar-empresa/visualizar/' + id,
+          url: '/cadastrar-empresa/visualizar/' + id,
           method: 'POST',
           data: {'id': id}
         }).done(function(data){

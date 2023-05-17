@@ -105,7 +105,7 @@ $(document).ready(function(){
     e.preventDefault();
     var id = $('#id-delete').val();
     $.ajax({
-      url: '/teste/cadastro-/deletar/' + id,
+      url: '/cadastro-/deletar/' + id,
       method: 'POST',
       data: {'id': id},
       success: function(data){
@@ -139,7 +139,7 @@ $(document).ready(function(){
           id = id.slice(13);
           $('#id-editar').val(id);
           $.ajax({
-            url: '/teste/cadastro-/visualizar/' + id,
+            url: '/cadastro-/visualizar/' + id,
             method: 'POST',
             data: {'id': id}
           }).done(function(data){

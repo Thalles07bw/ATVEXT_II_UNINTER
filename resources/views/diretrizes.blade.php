@@ -135,7 +135,7 @@ $(document).ready(function(){
       }else{
         let data = $("#cadastro-diretriz").serialize();
         $.ajax({
-          url: "/teste/diretrizes",
+          url: "/diretrizes",
           type: "post",
           data: data
         }).done(function(data){
@@ -143,7 +143,7 @@ $(document).ready(function(){
           console.log(data);
           $('.success-alert-text').html('');
           $('.success-alert-text').html(data['mensagem']);
-          $("#redirect-alert").attr("href", "/teste/diretrizes");
+          $("#redirect-alert").attr("href", "/diretrizes");
           $('#alert-ok').show();
         })
       }
@@ -176,7 +176,7 @@ $(document).ready(function(){
       }else{
         let data = $("#form-editar-diretriz").serialize();
         $.ajax({
-          url: "/teste/diretrizes/editar",
+          url: "/diretrizes/editar",
           type: "post",
           data: data
         }).done(function(data){
@@ -196,7 +196,7 @@ $(document).ready(function(){
     e.preventDefault();
     var id = $('#id-delete').val();
     $.ajax({
-      url: '/teste/diretrizes/deletar/' + id,
+      url: '/diretrizes/deletar/' + id,
       method: 'POST',
       data: {'id': id},
       success: function(data){
@@ -229,7 +229,7 @@ $(document).ready(function(){
         id = id.slice(13);
         $('#id-editar').val(id);
         $.ajax({
-          url: '/teste/diretrizes/visualizar/' + id,
+          url: '/diretrizes/visualizar/' + id,
           method: 'POST',
           data: {'id': id}
         }).done(function(data){

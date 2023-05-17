@@ -17,7 +17,7 @@ class ExameProcedimentoController extends Controller
                 'tabela' => $tabela
             ]);
         }else{
-            header("Location: /teste/login");
+            header("Location: /login");
             exit;
         }
     }

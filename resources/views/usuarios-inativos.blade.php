@@ -5,7 +5,7 @@
   @include('alerts.alert-modal-error')
   <nav aria-label="breadcrumb">
   <ol class="breadcrumb" style="float: right; background-color: #f9f9f9;">
-    <li class="breadcrumb-item"><a href="/teste/usuarios">Usuários</a></li>
+    <li class="breadcrumb-item"><a href="/usuarios">Usuários</a></li>
     <li class="breadcrumb-item active" aria-current="page">Usuários Inativos</li>
   </ol>
 </nav>
@@ -92,7 +92,7 @@ $(document).ready(function(){
     e.preventDefault();
     var id = $('#id-reativar').val();
     $.ajax({
-      url: '/teste/usuarios/ativar/' + id,
+      url: '/usuarios/ativar/' + id,
       method: 'POST',
       data: {'id': id},
       success: function(data){
@@ -127,7 +127,7 @@ $(document).ready(function(){
         id = id.slice(13);
         $('#id-editar').val(id);
         $.ajax({
-          url: '/teste/cadastro-/visualizar/' + id,
+          url: '/cadastro-/visualizar/' + id,
           method: 'POST',
           data: {'id': id}
         }).done(function(data){

@@ -82,7 +82,7 @@
 
     }else{
       $.ajax({
-        url: '/teste/habilitacao',
+        url: '/habilitacao',
         type: 'POST',
         data: data
       }).done(function(data){

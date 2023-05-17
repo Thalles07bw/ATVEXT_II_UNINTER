@@ -85,7 +85,7 @@
                       </datalist></td>
                     <td style="width: 25%;">
                         <a id="botao-salvar-{{$each->id_idioma_candidato}}"  class="btn btn-success" style="margin-left: 2px; margin-bottom: 2px; display: none">Salvar</a>
-                        <a id="botao-excluir-{{$each->id_idioma_candidato}}" href="/teste/idiomas/deletar/" class="btn btn-danger" style="margin-left: 2px; margin-bottom: 2px;">Excluir</a>
+                        <a id="botao-excluir-{{$each->id_idioma_candidato}}" href="/idiomas/deletar/" class="btn btn-danger" style="margin-left: 2px; margin-bottom: 2px;">Excluir</a>
                     </td>
                   </tr>
                   @endforeach
@@ -136,7 +136,7 @@ $(document).ready(function() {
 
     }else{
       $.ajax({
-        url: '/teste/idiomas',
+        url: '/idiomas',
         type: 'POST',
         data: data
       }).done(function(data){
@@ -145,7 +145,7 @@ $(document).ready(function() {
         if(data['flag'] == true){
           $('.success-alert-text').html('');
           $('.success-alert-text').html(data['mensagem']);
-          $("#redirect-alert").attr("href", "/teste/idiomas");
+          $("#redirect-alert").attr("href", "/idiomas");
           $('#alert-ok').show();
         }else{
           $('.error-alert-text').html('');
@@ -162,7 +162,7 @@ $(document).ready(function() {
   e.preventDefault();
   var id = $('#id-delete').val();
   $.ajax({
-    url: '/teste/idiomas/deletar/' + id,
+    url: '/idiomas/deletar/' + id,
     method: 'POST',
     data: {'id': id},
     success: function(data){
@@ -191,7 +191,7 @@ $(document).ready(function() {
         $(botao).hide();
   
         $.ajax({
-          url:"/teste/salvar-alteracoes-idioma",
+          url:"/salvar-alteracoes-idioma",
           method: "post",
           data: {'id_idioma_candidato': id, 'nivel_idioma_candidato': nivel}
         }).done(function(data){

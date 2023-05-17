@@ -47,7 +47,7 @@
         <li class="nav-item">
         @if($visual != NULL)
           @if($visual[0]->logo)
-          <img width="75px" src="/teste/storage/app/{{$visual[0]->logo}}">
+          <img width="75px" src="/storage/app/{{$visual[0]->logo}}">
           @else
           <h2 class="titleSmall vaga">Vagas</h2>
           @endif
@@ -155,7 +155,7 @@
     id = id.slice(14);
 
     $.ajax({
-      url: "/teste/candidatar-se",
+      url: "/candidatar-se",
       data:{'id_vaga': id, 'id_candidato': '{{$id_usuario_candidato}}'},
       type: 'post'
     }).done(function(data){
@@ -167,7 +167,7 @@
         if(data.resposta == true){
         $('.success-alert-text').html('');
           $('.success-alert-text').html(data['mensagem']);
-          $("#redirect-alert").attr("href", "/teste/portal-do-candidato");
+          $("#redirect-alert").attr("href", "/portal-do-candidato");
           $('#alert-ok').show();
         }else{
           $('.error-alert-text').html('');

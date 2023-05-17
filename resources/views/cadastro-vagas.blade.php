@@ -101,9 +101,9 @@
                     <td>{{$each->status_vaga}}</td>
                     <td style="width: 40%;">
                         @if($each->id_status_vaga == 1)
-                        <a href="/teste/quadro-processo-seletivo/{{$each->id_vaga}}" class="btn btn-info" style="margin-bottom: 2px;"> Candidatos</a>
+                        <a href="/quadro-processo-seletivo/{{$each->id_vaga}}" class="btn btn-info" style="margin-bottom: 2px;"> Candidatos</a>
                         @elseif($each->id_status_vaga == 4)
-                        <a href="/teste/modificar-etapas/{{$each->id_vaga}}" class="btn btn-info" style="margin-bottom: 2px;"> Modificar Etapas</a>
+                        <a href="/modificar-etapas/{{$each->id_vaga}}" class="btn btn-info" style="margin-bottom: 2px;"> Modificar Etapas</a>
                         @endif
                         <a id="botao-ver-{{$each->id_vaga}}" href="#" class="btn btn-primary" style="margin-left: 2px; margin-bottom: 2px;"> Ver</a>
                         <a id="botao-editar-{{$each->id_vaga}}" href="#" class="btn btn-success" style="margin-left: 2px; margin-bottom: 2px;">Editar</a>
@@ -319,14 +319,14 @@ $(document).ready(function() {
 
       }else{
         $.ajax({
-          url: '/teste/cadastro-vagas/editar',
+          url: '/cadastro-vagas/editar',
           type: 'POST',
           data: data
         }).done(function(data){
           data = JSON.parse(data);
           $('.success-alert-text').html('');
           $('.success-alert-text').html(data['mensagem']);
-          $("#redirect-alert").attr("href", "/teste/cadastro-vagas");
+          $("#redirect-alert").attr("href", "/cadastro-vagas");
           $('#alert-ok').show();
 
         });
@@ -337,7 +337,7 @@ $(document).ready(function() {
       e.preventDefault();
       var id = $('#id-delete').val();
       $.ajax({
-        url: '/teste/cadastro-vagas/deletar/' + id,
+        url: '/cadastro-vagas/deletar/' + id,
         method: 'POST',
         data: {'id': id},
         success: function(data){
@@ -406,14 +406,14 @@ $(document).ready(function() {
 
       }else{
         $.ajax({
-          url: '/teste/cadastro-vagas',
+          url: '/cadastro-vagas',
           type: 'POST',
           data: data
         }).done(function(data){
           data = JSON.parse(data);
           $('.success-alert-text').html('');
           $('.success-alert-text').html(data['mensagem']);
-          $("#redirect-alert").attr("href", "/teste/cadastro-vagas");
+          $("#redirect-alert").attr("href", "/cadastro-vagas");
           $('#alert-ok').show();
 
         });
@@ -438,7 +438,7 @@ $(document).ready(function() {
           id = id.slice(13);
           $('#id-editar').val(id);
           $.ajax({
-            url: '/teste/cadastro-vagas/visualizar/' + id,
+            url: '/cadastro-vagas/visualizar/' + id,
             method: 'POST',
             data: {'id': id}
           }).done(function(data){
@@ -462,7 +462,7 @@ $(document).ready(function() {
           id = id.slice(10);
       
           $.ajax({
-            url: '/teste/cadastro-vagas/visualizar/' + id,
+            url: '/cadastro-vagas/visualizar/' + id,
             method: 'POST',
             data: {'id': id}
           }).done(function(data){

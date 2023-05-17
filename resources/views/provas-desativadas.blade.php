@@ -14,7 +14,7 @@
       <div class="card shadow col-md-12">
         <div class="card-header py-3">
             <h4>Avaliações Desativadas</h4>
-            <a class="btn btn-primary" href="/teste/cadastrar-avaliacao" style="float:right;">Voltar para ativas</a>
+            <a class="btn btn-primary" href="/cadastrar-avaliacao" style="float:right;">Voltar para ativas</a>
         </div>
         <div class="card-body">
           <div class="table-responsive">
@@ -36,8 +36,8 @@
                     <td> {{$each->data_criacao}} </td>
                     <td>{{$each->tipo_tempo_prova}}</td>
                     <td style="width: 50%;">
-                        <a id="botao-questoes-{{$each->id_prova}}" href="/teste/cadastrar-questoes/{{$each->id_prova}}" class="btn btn-success" style="margin-left: 2px; margin-bottom: 2px;">Ver Questões</a>  
-                        <a id="botao-reativar-{{$each->id_prova}}" href="/teste/cadastrar-avaliacao/reativar/{{$each->id_prova}}" class="btn btn-primary" style="margin-left: 2px; margin-bottom: 2px;">Reativar</a>                    
+                        <a id="botao-questoes-{{$each->id_prova}}" href="/cadastrar-questoes/{{$each->id_prova}}" class="btn btn-success" style="margin-left: 2px; margin-bottom: 2px;">Ver Questões</a>  
+                        <a id="botao-reativar-{{$each->id_prova}}" href="/cadastrar-avaliacao/reativar/{{$each->id_prova}}" class="btn btn-primary" style="margin-left: 2px; margin-bottom: 2px;">Reativar</a>                    
                     </td>
                 </tr>
                 @endforeach
@@ -94,7 +94,7 @@
     var id = $("#id-reativar").val();
     console.log(id);
     $.ajax({
-      url: '/teste/cadastrar-avaliacao/reativar/' + id,
+      url: '/cadastrar-avaliacao/reativar/' + id,
       type: 'POST',
       data: {'id': id}
     }).done(function (data){

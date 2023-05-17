@@ -214,7 +214,7 @@ $(document).ready(function(){
       }else{
         let data = $("#cadastro-cursos").serialize();
         $.ajax({
-          url:'/teste/cadastrar-cursos',
+          url:'/cadastrar-cursos',
           method: 'post',
           data: data
         }).done(function(data){
@@ -223,7 +223,7 @@ $(document).ready(function(){
           if(data["flag"] == true){
             $('.success-alert-text').html('');
             $('.success-alert-text').html(data['mensagem']);
-            $("#redirect-alert").attr("href", "/teste/cadastrar-cursos");
+            $("#redirect-alert").attr("href", "/cadastrar-cursos");
             $('#alert-ok').show();
           }else{
             $('.error-alert-text').html('');
@@ -266,7 +266,7 @@ $(document).ready(function(){
       }else{
         let data = $("#form-editar").serialize();
         $.ajax({
-          url:'/teste/cadastrar-cursos/editar',
+          url:'/cadastrar-cursos/editar',
           method: 'post',
           data: data
         }).done(function(data){
@@ -291,7 +291,7 @@ $(document).ready(function(){
     e.preventDefault();
     var id = $('#id-delete').val();
     $.ajax({
-      url: '/teste/cadastrar-cursos/deletar/' + id,
+      url: '/cadastrar-cursos/deletar/' + id,
       method: 'POST',
       data: {'id': id},
       success: function(data){
@@ -324,7 +324,7 @@ $(document).ready(function(){
         id = id.slice(13);
         $('#id-editar').val(id);
         $.ajax({
-          url: '/teste/cadastrar-cursos/visualizar/' + id,
+          url: '/cadastrar-cursos/visualizar/' + id,
           method: 'POST',
           data: {'id': id}
         }).done(function(data){

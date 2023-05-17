@@ -100,7 +100,7 @@
                       @if($each->logo == '')
                       <td>Não Cadastrado</td>
                       @else
-                      <td><a href="/teste/storage/app/{{$each->logo}}">Clique para visualizar</a></td>
+                      <td><a href="/storage/app/{{$each->logo}}">Clique para visualizar</a></td>
                       @endif
                       <td><input style="width: 25px; height: 25px;
                        border-radius: 50%; border-color: black ;background-color: {{$each->cor}}" disabled>
@@ -238,7 +238,7 @@
     form_data.append("cor-icone", cor_icone);
     
     $.ajax({
-      url:'/teste/personalizar-mural',
+      url:'/personalizar-mural',
       method: 'POST',
       dataType: 'script',
       cache: false,
@@ -249,7 +249,7 @@
       data = JSON.parse(data);
           $('.success-alert-text').html('');
           $('.success-alert-text').html(data['mensagem']);
-          $("#redirect-alert").attr("href", "/teste/personalizar-mural");
+          $("#redirect-alert").attr("href", "/personalizar-mural");
           $('#alert-ok').show();
     });
   });
@@ -275,7 +275,7 @@
     form_data.append("cor-icone-edit",cor_icone_edit);
     
     $.ajax({
-      url:'/teste/personalizar-mural/editar',
+      url:'/personalizar-mural/editar',
       method: 'POST',
       dataType: 'script',
       cache: false,
@@ -285,7 +285,7 @@
     }).done(function(data){
       data = JSON.parse(data);
       $('.success-alert-text').html(data['mensagem']);
-      $("#redirect-alert").attr("href", "/teste/personalizar-mural");
+      $("#redirect-alert").attr("href", "/personalizar-mural");
       $('#alert-ok').show();
     });
   });

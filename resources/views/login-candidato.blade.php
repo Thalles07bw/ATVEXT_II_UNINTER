@@ -6,11 +6,11 @@
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="resources/css/fontawesome-free/all.min.css">
+    <link rel="stylesheet" href="/css/fontawesome-free/all.min.css">
     <!-- icheck bootstrap -->
-    <link rel="stylesheet" href="resources/css/icheck-bootstrap.min.css">
+    <link rel="stylesheet" href="/css/icheck-bootstrap.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="resources/css/adminlte.min.css">
+    <link rel="stylesheet" href="/css/adminlte.min.css">
   </head>
   @if($message ?? '')
   <div class="alert alert-danger alert-dismissible fade show" role="alert" >
@@ -26,7 +26,7 @@
       <div class="card card-outline card-orange">
       <div class="card-header text-center">
         <a href="https://basis.com.br" class="h1">
-        <img src="resources/img/logo_completa_2.png" width="190px"></img>
+        <img src="/img/logo_completa_2.png" width="190px"></img>
       </a>
       </div>
 
@@ -58,12 +58,12 @@
         </div>
         <div class="row">
           <div class="col-12" style="text-align: right; padding-top: 15px">            
-              <a href="/teste/recuperar-senha-candidato">Esqueci minha senha</a>             
+              <a href="/recuperar-senha-candidato">Esqueci minha senha</a>             
           </div>
         </div>
         <div class="row">
           <div class="col-12" style="text-align: right; padding-top: 15px">            
-              <a href="/teste/registro-candidato">Não possui cadastro? Crie aqui sua conta</a>             
+              <a href="/registro-candidato">Não possui cadastro? Crie aqui sua conta</a>             
           </div>
         </div>
       </form>
@@ -74,10 +74,10 @@
 </div>
 <!-- /.login-box -->
 <!-- jQuery -->
-<script src="resources/js/jquery/jquery.min.js"></script>
+<script src="/js/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
-<script src="resources/js/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="/js/bootstrap/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
-<script src="resources/js/adminlte.min.js"></script>
+<script src="/js/adminlte.min.js"></script>
 </body>
 </html>

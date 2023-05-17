@@ -8,13 +8,13 @@
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="resources/css/fontawesome-free/all.min.css">
+    <link rel="stylesheet" href="/css/fontawesome-free/all.min.css">
     <!-- icheck bootstrap -->
-    <link rel="stylesheet" href="resources/css/icheck-bootstrap.min.css">
+    <link rel="stylesheet" href="/css/icheck-bootstrap.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="resources/css/adminlte.min.css">
+    <link rel="stylesheet" href="/css/adminlte.min.css">
     <!-- css adicional -->
-    <link rel="stylesheet" href="resources/css/app.css">
+    <link rel="stylesheet" href="/css/app.css">
   </head>
   </head>
   <body>
@@ -54,7 +54,7 @@
           </form>
           <div class="row">
             <div class="col-12" style="text-align: right; padding-top: 15px">             
-                <a href="/teste/login">Retornar a página de Login</a>              
+                <a href="/login">Retornar a página de Login</a>              
             </div>
           </div>
         </div>
@@ -63,7 +63,7 @@
     </div>
   </body>
   <footer>
-    <script src="resources/js/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="resources/js/validation/valida-recupera-senha.js"></script>
+    <script src="/js/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/validation/valida-recupera-senha.js"></script>
   </footer>
 </html>

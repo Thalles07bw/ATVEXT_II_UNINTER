@@ -22,7 +22,7 @@ class ClasseSenhaCandidato{
       $endereço_local = '127.0.0.1';
       $assunto = utf8_decode('Recuperação de senha');
       $corpo = utf8_decode("<p>Aqui está o link para a recuperação da sua senha 
-      <br><b> Link: </b><a href='http://".$endereço_local."/teste/nova-senha-candidato?token=".$valor_token."'>
+      <br><b> Link: </b><a href='http://".$endereço_local."/nova-senha-candidato?token=".$valor_token."'>
       Clique Aqui</a></p>");
 
       $resposta_envio = $email->conectarEmail($endereço,$assunto,$corpo);

@@ -148,8 +148,8 @@
                 <tr >
                     <td style="text-align: left;">  {!!$each->pergunta_prova !!} </td>
                     <td style="width: 38%; text-align: center;"> 
-                      <a id="botao-ver-{{$each->id_pergunta_prova}}" href="/teste/cadastrar-questao/ver-alternativas/" class="btn btn-primary" style="margin-left: 2px; margin-bottom: 2px;">Ver alternativas</a>        
-                      <a id="botao-anular-{{$each->id_pergunta_prova}}" href="/teste/cadastrar-questao/anular/" class="btn btn-danger" style="margin-left: 2px; margin-bottom: 2px;">Anular</a>
+                      <a id="botao-ver-{{$each->id_pergunta_prova}}" href="/cadastrar-questao/ver-alternativas/" class="btn btn-primary" style="margin-left: 2px; margin-bottom: 2px;">Ver alternativas</a>        
+                      <a id="botao-anular-{{$each->id_pergunta_prova}}" href="/cadastrar-questao/anular/" class="btn btn-danger" style="margin-left: 2px; margin-bottom: 2px;">Anular</a>
                     </td>
                 </tr>
                 @endforeach
@@ -300,7 +300,7 @@
       var data = $('#cadastro-perguntas').serialize();
       console.log(data);
       $.ajax({
-        url: '/teste/cadastrar-questoes/'+ id,
+        url: '/cadastrar-questoes/'+ id,
         type: 'post',
         data: data
       }).done(function (data){
@@ -308,7 +308,7 @@
        console.log(data);
         $('.success-alert-text').html('');
           $('.success-alert-text').html(data['mensagem']);
-          $("#redirect-alert").attr("href", "/teste/cadastrar-questoes/" + id);
+          $("#redirect-alert").attr("href", "/cadastrar-questoes/" + id);
           $('#alert-ok').show();
       });
     }
@@ -319,7 +319,7 @@
       e.preventDefault();
       var id = $('#id-anular').val();
       $.ajax({
-        url: '/teste/cadastrar-questoes/anular/' + id,
+        url: '/cadastrar-questoes/anular/' + id,
         method: 'POST',
         data: {'id': id},
         success: function(data){
@@ -337,7 +337,7 @@
       id = id.slice(10);
    
       $.ajax({
-        url: '/teste/cadastrar-questoes/ver-alternativas/' + id,
+        url: '/cadastrar-questoes/ver-alternativas/' + id,
         method: 'POST',
         data: {'id': id}
       }).done(function(data){
@@ -379,7 +379,7 @@
             id = id.slice(13);
             $('#id-editar').val(id);
             $.ajax({
-              url: '/teste/beneficios/visualizar/' + id,
+              url: '/beneficios/visualizar/' + id,
               method: 'POST',
               data: {'id': id}
             }).done(function(data){

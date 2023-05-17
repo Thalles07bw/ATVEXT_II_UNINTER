@@ -6,13 +6,13 @@
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="resources/css/fontawesome-free/all.min.css">
+    <link rel="stylesheet" href="/css/fontawesome-free/all.min.css">
     <!-- icheck bootstrap -->
-    <link rel="stylesheet" href="resources/css/icheck-bootstrap.min.css">
+    <link rel="stylesheet" href="/css/icheck-bootstrap.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="resources/css/adminlte.min.css">
+    <link rel="stylesheet" href="/css/adminlte.min.css">
     <!-- css adicional -->
-    <link rel="stylesheet" href="resources/css/app.css">
+    <link rel="stylesheet" href="/css/app.css">
   </head>
 
   <body>
@@ -52,7 +52,7 @@
               </strong> para ir a página de Login.
             </div>
             <div class="modal-footer justify-content-between">
-              <a href="/teste/login" class="btn btn-outline-light">OK</a>
+              <a href="/login" class="btn btn-outline-light">OK</a>
             </div>
           </div>
         </div>
@@ -96,8 +96,8 @@
     </div>
   </body>
   <footer>
-    <script src="resources/js/jquery/jquery.min.js"></script>
-    <script src="resources/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="/js/jquery/jquery.min.js"></script>
+    <script src="/js/bootstrap/bootstrap.bundle.min.js"></script>
     <script type="text/javascript">
       $("#form-cadastra-senha").on('submit', function(e){
         e.preventDefault();
@@ -110,7 +110,7 @@
         if($("#senha").val() === $("#senha-repeticao").val()){
           $.ajax({
             type: 'post',
-            url: '/teste/nova-senha?q='+ token,
+            url: '/nova-senha?q='+ token,
             data: data
             
           }).done(function(data){
@@ -119,7 +119,7 @@
             if(data.flag == true){
               $(".success-alert-text").html(data.mensagem); 
               $("#alert-ok").show(); 
-              $("#redirect-alert").attr("href", "/teste/login");
+              $("#redirect-alert").attr("href", "/login");
           
             }else if(data.falha == 1){
              

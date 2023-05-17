@@ -370,7 +370,7 @@ $(document).ready(function() {
 
     }else{
       $.ajax({
-        url: '/teste/curriculo',
+        url: '/curriculo',
         type: 'POST',
         data: data
       }).done(function(data){
@@ -381,7 +381,7 @@ $(document).ready(function() {
         if(data['primeiro_cadastro'] == false){
           $("#redirect-alert").attr("onclick", "$('#alert-ok').hide()");
         }else{
-          $("#redirect-alert").attr("href", "/teste/portal-do-candidato");
+          $("#redirect-alert").attr("href", "/portal-do-candidato");
         }
         $('.success-alert-text').html(data['mensagem']);
 

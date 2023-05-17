@@ -311,7 +311,7 @@ $(document).ready(function(){
     }else{
       let data = $("#cadastro-treinamento").serialize();
       $.ajax({
-        url: '/teste/cadastrar-treinamento',
+        url: '/cadastrar-treinamento',
         method: 'POST',
         data: data
       }).done(function(data){
@@ -319,7 +319,7 @@ $(document).ready(function(){
         if(data["flag"] == true){
             $('.success-alert-text').html('');
             $('.success-alert-text').html(data['mensagem']);
-            $("#redirect-alert").attr("href", "/teste/cadastrar-treinamento");
+            $("#redirect-alert").attr("href", "/cadastrar-treinamento");
             $('#alert-ok').show();
         }else{
           $('.error-alert-text').html('');
@@ -371,7 +371,7 @@ $(document).ready(function(){
       let data = $("#form-editar-treinamento").serialize();
       console.log(data);
       $.ajax({
-        url: '/teste/cadastrar-treinamento/editar',
+        url: '/cadastrar-treinamento/editar',
         method: 'POST',
         data: data
       }).done(function(data){
@@ -379,7 +379,7 @@ $(document).ready(function(){
         if(data["flag"] == true){
             $('.success-alert-text').html('');
             $('.success-alert-text').html(data['mensagem']);
-            $("#redirect-alert").attr("href", "/teste/cadastrar-treinamento");
+            $("#redirect-alert").attr("href", "/cadastrar-treinamento");
             $('#alert-ok').show();
         }else{
           $('.error-alert-text').html('');
@@ -394,7 +394,7 @@ $(document).ready(function(){
     e.preventDefault();
     let data = $("#form-editar-turma").serialize();
     $.ajax({
-      url: "/teste/cadastrar-treinamento/editar-turma",
+      url: "/cadastrar-treinamento/editar-turma",
       method: 'POST',
       data: data
     }).done(function(data){
@@ -402,7 +402,7 @@ $(document).ready(function(){
       if(data["flag"] == true){
         $('.success-alert-text').html('');
         $('.success-alert-text').html(data['mensagem']);
-        $("#redirect-alert").attr("href", "/teste/cadastrar-treinamento");
+        $("#redirect-alert").attr("href", "/cadastrar-treinamento");
         $('#alert-ok').show();
       }else{
         $('.error-alert-text').html('');
@@ -417,7 +417,7 @@ $(document).ready(function(){
     e.preventDefault();
     var id = $('#id-delete').val();
     $.ajax({
-      url: '/teste/cadastro-/deletar/' + id,
+      url: '/cadastro-/deletar/' + id,
       method: 'POST',
       data: {'id': id},
       success: function(data){
@@ -441,7 +441,7 @@ $(document).ready(function(){
         id = id.slice(12);
         $('#id-editar-turma').val(id);
         $.ajax({
-          url: '/teste/cadastrar-treinamento/turma/' + id,
+          url: '/cadastrar-treinamento/turma/' + id,
           method: 'POST',
           data: {'id': id}
         }).done(function(data){
@@ -462,7 +462,7 @@ $(document).ready(function(){
         id = id.slice(13);
         $('#id-editar').val(id);
         $.ajax({
-          url: '/teste/cadastrar-treinamento/visualizar/' + id,
+          url: '/cadastrar-treinamento/visualizar/' + id,
           method: 'POST',
           data: {'id': id}
         }).done(function(data){

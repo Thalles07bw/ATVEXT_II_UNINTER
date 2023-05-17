@@ -1,0 +1,60 @@
+.row-paginas-senha{
+  -webkit-align-items:center;
+  -ms-flex-align:center;
+  align-items:center;
+  display:-webkit-flex;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-flex-direction:column;
+  -ms-flex-direction:column;
+  flex-direction:column;
+  height:100vh;
+  -webkit-justify-content:center;
+  -ms-flex-pack:center;
+  justify-content:center
+  
+}
+.row-paginas-cadastro{
+
+  -webkit-align-items:center;
+  -ms-flex-align:center;
+  align-items:center;
+  display:-webkit-flex;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-flex-direction:column;
+  -ms-flex-direction:column;
+  flex-direction:column;
+
+
+  
+}
+.register-box-cadastro{
+  margin: 10px 10px 10px 10px;
+}
+@media (max-width: 576px){
+  .card-max-wdt {
+    margin-top: 0.5rem;
+    width: 90%;
+  }
+}
+
+.timeline-body{
+  padding-bottom: 10px;
+}
+
+.form-row-spacing{
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.timeline-row-spacing{
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.timeline-date-input-spacing{
+  padding-bottom: 20px;
+}

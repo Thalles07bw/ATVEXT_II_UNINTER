@@ -68,7 +68,7 @@
       <div class="card shadow col-md-12">
         <div class="card-header py-3">
             <h4>Avaliações Cadastradas</h4>
-            <a class="btn btn-primary" href="/teste/cadastrar-avaliacao/desativadas" style="float:right;">Ver inativas</a>
+            <a class="btn btn-primary" href="/cadastrar-avaliacao/desativadas" style="float:right;">Ver inativas</a>
         </div>
         <div class="card-body">
           <div class="table-responsive">
@@ -90,10 +90,10 @@
                     <td> {{$each->data_criacao}} </td>
                     <td>{{$each->tipo_tempo_prova}}</td>
                     <td style="width: 50%;">
-                        <a id="botao-copia-{{$each->id_prova}}" href="/teste/cadastrar-avaliacao/criar-copia/" class="btn btn-primary" style="margin-bottom: 2px;"> Cria Cópia</a>
-                        <a id="botao-editar-{{$each->id_prova}}" href="/teste/cadastrar-avaliacao/editar/" class="btn btn-dark" style="margin-left: 2px; margin-bottom: 2px;">Editar</a>
-                        <a id="botao-questoes-{{$each->id_prova}}" href="/teste/cadastrar-questoes/{{$each->id_prova}}" class="btn btn-success" style="margin-left: 2px; margin-bottom: 2px;">Cadastrar Questões</a>  
-                        <a id="botao-desativar-{{$each->id_prova}}" href="/teste/cadastrar-avaliacao/desativar/{{$each->id_prova}}" class="btn btn-danger" style="margin-left: 2px; margin-bottom: 2px;">Desativar</a>                    
+                        <a id="botao-copia-{{$each->id_prova}}" href="/cadastrar-avaliacao/criar-copia/" class="btn btn-primary" style="margin-bottom: 2px;"> Cria Cópia</a>
+                        <a id="botao-editar-{{$each->id_prova}}" href="/cadastrar-avaliacao/editar/" class="btn btn-dark" style="margin-left: 2px; margin-bottom: 2px;">Editar</a>
+                        <a id="botao-questoes-{{$each->id_prova}}" href="/cadastrar-questoes/{{$each->id_prova}}" class="btn btn-success" style="margin-left: 2px; margin-bottom: 2px;">Cadastrar Questões</a>  
+                        <a id="botao-desativar-{{$each->id_prova}}" href="/cadastrar-avaliacao/desativar/{{$each->id_prova}}" class="btn btn-danger" style="margin-left: 2px; margin-bottom: 2px;">Desativar</a>                    
                     </td>
                 </tr>
                 @endforeach
@@ -193,7 +193,7 @@
 
     }else{
       $.ajax({
-        url: '/teste/cadastrar-avaliacao',
+        url: '/cadastrar-avaliacao',
         type: 'POST',
         data: data
       }).done(function (data){
@@ -201,7 +201,7 @@
        console.log(data);
        $('.success-alert-text').html('');
           $('.success-alert-text').html(data['mensagem']);
-          $("#redirect-alert").attr("href", "/teste/cadastrar-avaliacao");
+          $("#redirect-alert").attr("href", "/cadastrar-avaliacao");
           $('#alert-ok').show();
       });
     }
@@ -212,7 +212,7 @@
     let id = this.id;
     id = id.slice(12);
     $.ajax({
-      url: '/teste/cadastrar-avaliacao/copia/' + id,
+      url: '/cadastrar-avaliacao/copia/' + id,
       type: 'POST',
       data: {'id': id}
     }).done(function (data){
@@ -220,7 +220,7 @@
     console.log(data);
     $('.success-alert-text').html('');
       $('.success-alert-text').html(data);
-      $("#redirect-alert").attr("href", "/teste/cadastrar-avaliacao");
+      $("#redirect-alert").attr("href", "/cadastrar-avaliacao");
       $('#alert-ok').show();
     });
   });
@@ -231,7 +231,7 @@
     var id = $("#id-desativar").val();
     console.log(id);
     $.ajax({
-      url: '/teste/cadastrar-avaliacao/desativar/' + id,
+      url: '/cadastrar-avaliacao/desativar/' + id,
       type: 'POST',
       data: {'id': id}
     }).done(function (data){
@@ -260,7 +260,7 @@
       var data = $('#atualizar-prova').serialize();
       console.log(data);
       $.ajax({
-        url:"/teste/cadastrar-avaliacao/editar",
+        url:"/cadastrar-avaliacao/editar",
         type: 'POST',
         data: data
       }).done(function(data){
@@ -268,7 +268,7 @@
         console.log(data);
         $('.success-alert-text').html('');
         $('.success-alert-text').html(data.mensagem);
-        $("#redirect-alert").attr("href", "/teste/cadastrar-avaliacao");
+        $("#redirect-alert").attr("href", "/cadastrar-avaliacao");
         $('#alert-ok').show();
       })
     }
@@ -294,7 +294,7 @@
             id = id.slice(13);
             $('#id-editar').val(id);
             $.ajax({
-              url: '/teste/cadastrar-avaliacao/visualizar/' + id,
+              url: '/cadastrar-avaliacao/visualizar/' + id,
               method: 'POST',
               data: {'id': id}
             }).done(function(data){

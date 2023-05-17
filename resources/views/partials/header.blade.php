@@ -21,7 +21,7 @@
 
     <!-- Custom fonts for this template-->
     <link
-      href="resources/css/fontawesome-free/all.min.css"
+      href="/css/fontawesome-free/all.min.css"
       rel="stylesheet"
       type="text/css"
     />
@@ -31,7 +31,7 @@
     />
 
     <!-- Custom styles for this template-->
-    <link href="resources/css/sb-admin2/sb-admin-2.min.css" rel="stylesheet" />
+    <link href="/css/sb-admin2/sb-admin-2.min.css" rel="stylesheet" />
     
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <!-- include summernote css/js -->
@@ -41,7 +41,7 @@
     <!--Selectize-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.3/css/selectize.bootstrap4.min.css" rel="stylesheet">
     <!--CSS local-->
-    <link href="resources/css/app.css" rel="stylesheet">
+    <link href="/css/app.css" rel="stylesheet">
 
   </head>
 
@@ -56,13 +56,13 @@
         <!-- Sidebar - Brand -->
         <a
           class="sidebar-brand d-flex align-items-center justify-content-center"
-          href="/teste/principal"
+          href="/principal"
         >
           <div class="sidebar-brand-icon">
-            <img src="resources/img/logo.png" width=50px>
+            <img src="/img/logo.png" width=50px>
           </div>
           <div class="sidebar-brand-text mx-3" style="color: orange">
-            <img src="resources/img/logo_letras.png" width=50px>
+            <img src="/img/logo_letras.png" width=50px>
           </div>
         </a>
 
@@ -72,7 +72,7 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
-          <a class="nav-link" href="/teste/principal">
+          <a class="nav-link" href="/principal">
             <i class="fas fa-fw fa-home"></i>
             <span>Principal</span></a
           >
@@ -108,12 +108,12 @@
           data-parent="#accordionSidebar"
         >
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="/teste/beneficios">Benefícios</a>
-            <a class="collapse-item" href="/teste/usuarios">Cadastrar Usuário </a>
-            <a class="collapse-item" href="/teste/cadastro-cargos">Cadastro de Cargos</a>
-            <a class="collapse-item" href="/teste/colaborador">Cadastrar Colaborador</a>            
-            <a class="collapse-item" href="/teste/demissoes">Demissões</a>      
-            <a class="collapse-item" href="/teste/departamentos">Departamentos</a>
+            <a class="collapse-item" href="/beneficios">Benefícios</a>
+            <a class="collapse-item" href="/usuarios">Cadastrar Usuário </a>
+            <a class="collapse-item" href="/cadastro-cargos">Cadastro de Cargos</a>
+            <a class="collapse-item" href="/colaborador">Cadastrar Colaborador</a>            
+            <a class="collapse-item" href="/demissoes">Demissões</a>      
+            <a class="collapse-item" href="/departamentos">Departamentos</a>
             
           </div>
         </div>
@@ -141,9 +141,9 @@
         >
           <div class="bg-white py-2 collapse-inner rounded">
             
-            <a class="collapse-item" href="/teste/cadastro-vagas">Cadastro de Vagas</a>
-            <a class="collapse-item" href="/teste/personalizar-mural">Personalizar Mural</a>
-            <a class="collapse-item" href="/teste/resultado-avaliacao">Resultados de Avaliações</a>
+            <a class="collapse-item" href="/cadastro-vagas">Cadastro de Vagas</a>
+            <a class="collapse-item" href="/personalizar-mural">Personalizar Mural</a>
+            <a class="collapse-item" href="/resultado-avaliacao">Resultados de Avaliações</a>
           </div>
         </div>
       </li>
@@ -169,16 +169,16 @@
         data-parent="#accordionSidebar"
       >
         <div class="bg-white py-2 collapse-inner rounded">
-          <a class="collapse-item" href="/teste/instrutores">Cadastrar Instrutor</a>
-          <a class="collapse-item" href="/teste/cadastrar-cursos">Cadastrar Curso</a>
-          <a class="collapse-item" href="/teste/salas-de-aula">Cadastrar Salas de Aula</a>
-          <a class="collapse-item"  href="/teste/diretrizes">Cadastrar Diretriz</a>
-          <a class="collapse-item" href="/teste/inserir-arquivos-treinamento">Cadastrar Arquivos</a>
-          <a class="collapse-item" href="/teste/cadastrar-treinamento">Cadastrar Treinamento</a>
-          <a class="collapse-item" href="/teste/cadastrar-aula">Cadastrar Aula</a> 
-          <a class="collapse-item" href="/teste/agenda-treinamentos">Agenda de Treinamentos</a>
-          <a class="collapse-item" href="/teste/agenda-geral-treinamentos">Agenda Geral de Aulas</a>
-          <a class="collapse-item" href="/teste/percentual-treinamento">Percentual de Conclusão</a>
+          <a class="collapse-item" href="/instrutores">Cadastrar Instrutor</a>
+          <a class="collapse-item" href="/cadastrar-cursos">Cadastrar Curso</a>
+          <a class="collapse-item" href="/salas-de-aula">Cadastrar Salas de Aula</a>
+          <a class="collapse-item"  href="/diretrizes">Cadastrar Diretriz</a>
+          <a class="collapse-item" href="/inserir-arquivos-treinamento">Cadastrar Arquivos</a>
+          <a class="collapse-item" href="/cadastrar-treinamento">Cadastrar Treinamento</a>
+          <a class="collapse-item" href="/cadastrar-aula">Cadastrar Aula</a> 
+          <a class="collapse-item" href="/agenda-treinamentos">Agenda de Treinamentos</a>
+          <a class="collapse-item" href="/agenda-geral-treinamentos">Agenda Geral de Aulas</a>
+          <a class="collapse-item" href="/percentual-treinamento">Percentual de Conclusão</a>
         </div>
       </div>
     </li>
@@ -202,7 +202,7 @@
         data-parent="#accordionSidebar"
       >
         <div class="bg-white py-2 collapse-inner rounded">
-          <a class="collapse-item" href="/teste/cadastrar-avaliacao">Criar Avaliação</a>
+          <a class="collapse-item" href="/cadastrar-avaliacao">Criar Avaliação</a>
 
         </div>
       </div>
@@ -228,7 +228,7 @@
       >
         <div class="bg-white py-2 collapse-inner rounded">
 
-          <a class="collapse-item" href="/teste/cadastrar-empresa">Suas Empresas</a>
+          <a class="collapse-item" href="/cadastrar-empresa">Suas Empresas</a>
 
         </div>
       </div>

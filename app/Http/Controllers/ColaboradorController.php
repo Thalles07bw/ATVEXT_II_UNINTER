@@ -57,7 +57,7 @@ class ColaboradorController extends Controller
 
             ]);
         }else{
-            header("Location: /teste/login");
+            header("Location: /login");
             exit;
         }
     }

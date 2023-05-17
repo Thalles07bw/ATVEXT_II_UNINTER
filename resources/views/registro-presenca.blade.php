@@ -98,7 +98,7 @@ $(document).ready(function(){
     let status = 0;
 
     $.ajax({
-      url: '/teste/registro-presenca/'+id_aula,
+      url: '/registro-presenca/'+id_aula,
       method: 'POST',
       data: {'id_aluno': id_aluno, 'id_aula': id_aula, 'status': status}
     }).done(function(data){
@@ -120,7 +120,7 @@ $(document).ready(function(){
     let id_aula = baseUrl.substring(baseUrl.lastIndexOf('/') + 1);
     let status = 1;
     $.ajax({
-      url: '/teste/registro-presenca/'+id_aula,
+      url: '/registro-presenca/'+id_aula,
       method: 'POST',
       data: {'id_aluno': id_aluno, 'id_aula': id_aula, 'status': status}
     }).done(function(data){

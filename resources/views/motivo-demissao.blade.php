@@ -51,8 +51,8 @@
                 <tr style="text-align: center;">
                     <td>{{$each->motivo_demissao}}</td>
                     <td style="width: 40%;">
-                        <a id="botao-editar-{{$each->id_motivo_demissao}}" href="/teste/motivo-demissao/editar/{{$each->id_motivo_demissao}}" class="btn btn-success" style="margin-left: 2px; margin-bottom: 2px;">Editar</a>
-                        <a id="botao-excluir-{{$each->id_motivo_demissao}}" href="/teste/motivo-demissao/deletar/{{$each->id_motivo_demissao}}" class="btn btn-danger" style="margin-left: 2px; margin-bottom: 2px;">Excluir</a>
+                        <a id="botao-editar-{{$each->id_motivo_demissao}}" href="/motivo-demissao/editar/{{$each->id_motivo_demissao}}" class="btn btn-success" style="margin-left: 2px; margin-bottom: 2px;">Editar</a>
+                        <a id="botao-excluir-{{$each->id_motivo_demissao}}" href="/motivo-demissao/deletar/{{$each->id_motivo_demissao}}" class="btn btn-danger" style="margin-left: 2px; margin-bottom: 2px;">Excluir</a>
                     </td>
                   </tr>
                 @endforeach
@@ -109,7 +109,7 @@
       }
       else{
         $.ajax({
-          url: "/teste/motivo-demissao",
+          url: "/motivo-demissao",
           type: 'post',
           data: data
           
@@ -117,7 +117,7 @@
           data = JSON.parse(data);
           $('.success-alert-text').html('');
           $('.success-alert-text').html(data['mensagem']);
-          $("#redirect-alert").attr("href", "/teste/motivo-demissao");
+          $("#redirect-alert").attr("href", "/motivo-demissao");
           $('#alert-ok').show();
         })
     }
@@ -136,7 +136,7 @@
     e.preventDefault();
     var id = $('#id-delete').val();
     $.ajax({
-      url: '/teste/motivo-demissao/deletar/' + id,
+      url: '/motivo-demissao/deletar/' + id,
       method: 'POST',
       data: {'id': id},
       success: function(data){
@@ -161,7 +161,7 @@ $("#form-editar-motivo-demissao").on('submit', function(e){
       }
       else{
         $.ajax({
-          url: "/teste/motivo-demissao/editar",
+          url: "/motivo-demissao/editar",
           type: 'post',
           data: data
           
@@ -169,7 +169,7 @@ $("#form-editar-motivo-demissao").on('submit', function(e){
           data = JSON.parse(data);
           $('.success-alert-text').html('');
           $('.success-alert-text').html(data['mensagem']);
-          $("#redirect-alert").attr("href", "/teste/motivo-demissao");
+          $("#redirect-alert").attr("href", "/motivo-demissao");
           $('#alert-ok').show();
         })
     }
@@ -194,7 +194,7 @@ $("#form-editar-motivo-demissao").on('submit', function(e){
             id = id.slice(13);
             $('#id-editar').val(id);
             $.ajax({
-              url: '/teste/motivo-demissao/visualizar/' + id,
+              url: '/motivo-demissao/visualizar/' + id,
               method: 'POST',
               data: {'id': id}
             }).done(function(data){

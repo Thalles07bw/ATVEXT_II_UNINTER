@@ -51,8 +51,8 @@
               <tr style="text-align: center;">
                   <td>{{$each->nome_tipo_exame_procedimento}}</td>
                   <td style="width: 40%;">
-                      <a id="botao-editar-{{$each->id_tipo_exame_procedimento}}" href="/teste/cadastro-exame-procedimento/editar/{{$each->id_tipo_exame_procedimento}}" class="btn btn-success" style="margin-left: 2px; margin-bottom: 2px;">Editar</a>
-                      <a id="botao-excluir-{{$each->id_tipo_exame_procedimento}}" href="/teste/cadastro-exame-procedimento/deletar/{{$each->id_tipo_exame_procedimento}}" class="btn btn-danger" style="margin-left: 2px; margin-bottom: 2px;">Excluir</a>
+                      <a id="botao-editar-{{$each->id_tipo_exame_procedimento}}" href="/cadastro-exame-procedimento/editar/{{$each->id_tipo_exame_procedimento}}" class="btn btn-success" style="margin-left: 2px; margin-bottom: 2px;">Editar</a>
+                      <a id="botao-excluir-{{$each->id_tipo_exame_procedimento}}" href="/cadastro-exame-procedimento/deletar/{{$each->id_tipo_exame_procedimento}}" class="btn btn-danger" style="margin-left: 2px; margin-bottom: 2px;">Excluir</a>
                   </td>
                 </tr>
               @endforeach
@@ -109,7 +109,7 @@ $(document).ready(function(){
       }
       else{
         $.ajax({
-          url: "/teste/cadastro-exame-procedimento",
+          url: "/cadastro-exame-procedimento",
           type: 'post',
           data: data
           
@@ -117,7 +117,7 @@ $(document).ready(function(){
           data = JSON.parse(data);
           $('.success-alert-text').html('');
           $('.success-alert-text').html(data['mensagem']);
-          $("#redirect-alert").attr("href", "/teste/cadastro-exame-procedimento");
+          $("#redirect-alert").attr("href", "/cadastro-exame-procedimento");
           $('#alert-ok').show();
         })
     }
@@ -136,7 +136,7 @@ $(document).ready(function(){
     }
     else{
       $.ajax({
-        url: "/teste/cadastro-exame-procedimento/editar",
+        url: "/cadastro-exame-procedimento/editar",
         type: 'post',
         data: data
         
@@ -144,7 +144,7 @@ $(document).ready(function(){
         data = JSON.parse(data);
         $('.success-alert-text').html('');
         $('.success-alert-text').html(data['mensagem']);
-        $("#redirect-alert").attr("href", "/teste/cadastro-exame-procedimento");
+        $("#redirect-alert").attr("href", "/cadastro-exame-procedimento");
         $('#alert-ok').show();
       })
     }
@@ -155,7 +155,7 @@ $(document).ready(function(){
     e.preventDefault();
     var id = $('#id-delete').val();
     $.ajax({
-      url: '/teste/cadastro-exame-procedimento/deletar/' + id,
+      url: '/cadastro-exame-procedimento/deletar/' + id,
       method: 'POST',
       data: {'id': id},
       success: function(data){
@@ -188,7 +188,7 @@ $(document).ready(function(){
         id = id.slice(13);
         $('#id-editar').val(id);
         $.ajax({
-          url: '/teste/cadastro-exame-procedimento/visualizar/' + id,
+          url: '/cadastro-exame-procedimento/visualizar/' + id,
           method: 'POST',
           data: {'id': id}
         }).done(function(data){

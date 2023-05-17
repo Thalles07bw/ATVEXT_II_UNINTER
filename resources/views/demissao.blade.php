@@ -67,7 +67,7 @@
                @foreach($tabela as $each)
                 <tr style="text-align: center;">
                   <td style="width: 10%;"><img id="foto-click-{{$each->id_colaborador}}" 
-                  src="/teste/storage/app/images/employees/{{$each->foto_colaborador}}" 
+                  src="/storage/app/images/employees/{{$each->foto_colaborador}}" 
                   width="70px" height="70px" style="border-radius: 50%;"
                   >
                   <td>{{$each->nome_colaborador}}</td>
@@ -152,7 +152,7 @@
       }
       else{
         $.ajax({
-          url: "/teste/demissoes",
+          url: "/demissoes",
           type: 'post',
           data: data
           
@@ -161,7 +161,7 @@
           console.log(data);
           $('.success-alert-text').html('');
           $('.success-alert-text').html(data['mensagem']);
-          $("#redirect-alert").attr("href", "/teste/demissoes");
+          $("#redirect-alert").attr("href", "/demissoes");
           $('#alert-ok').show();
         })
     }
@@ -172,7 +172,7 @@
     e.preventDefault();
     var id = $('#id-cancel').val();
     $.ajax({
-      url: '/teste/demissoes/cancelar/' + id,
+      url: '/demissoes/cancelar/' + id,
       method: 'POST',
       data: {'id': id},
       success: function(data){
@@ -196,7 +196,7 @@ $("#form-editar-demissao").on('submit', function(e){
       }
       else{
         $.ajax({
-          url: "/teste/demissoes/editar",
+          url: "/demissoes/editar",
           type: 'post',
           data: data
           
@@ -204,7 +204,7 @@ $("#form-editar-demissao").on('submit', function(e){
           data = JSON.parse(data);
           $('.success-alert-text').html('');
           $('.success-alert-text').html(data['mensagem']);
-          $("#redirect-alert").attr("href", "/teste/demissoes");
+          $("#redirect-alert").attr("href", "/demissoes");
           $('#alert-ok').show();
         })
     }
@@ -230,7 +230,7 @@ $("#form-editar-demissao").on('submit', function(e){
             id = id.slice(13);
             $('#id-editar').val(id);
             $.ajax({
-              url: '/teste/motivo-demissao/visualizar/' + id,
+              url: '/motivo-demissao/visualizar/' + id,
               method: 'POST',
               data: {'id': id}
             }).done(function(data){

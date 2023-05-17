@@ -52,7 +52,7 @@
     e.preventDefault();
     var id = $('#id-cancel').val();
     $.ajax({
-      url: '/teste/candidaturas/cancelar/' + id,
+      url: '/candidaturas/cancelar/' + id,
       method: 'POST',
       data: {'id': id},
       success: function(data){

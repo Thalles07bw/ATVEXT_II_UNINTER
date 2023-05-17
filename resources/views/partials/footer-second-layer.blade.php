@@ -54,7 +54,7 @@
             </button>
             <a
               class="btn btn-primary"
-              href="/teste/logout">
+              href="/logout">
               Logout
             </a>
           </div>

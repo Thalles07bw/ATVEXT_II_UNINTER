@@ -5,7 +5,7 @@
   @include('alerts.alert-modal-error')
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb" style="float: right; background-color: #f9f9f9;">
-    <li class="breadcrumb-item"><a href="/teste/cadastro-vagas">Vagas</a></li>
+    <li class="breadcrumb-item"><a href="/cadastro-vagas">Vagas</a></li>
     <li class="breadcrumb-item active" aria-current="page">Etapas do Processo Seletivo</li>
   </ol>
 </nav>
@@ -234,7 +234,7 @@
     else{
       if($('#etapa-2').is(":checked") == true){        
         $.ajax({
-          url: '/teste/modificar-etapas',
+          url: '/modificar-etapas',
           type: 'POST',
           data: {'vaga': $('#id-vaga').val(), 'ordem': $('#etapa-2-posicao').val(),
           'etapa' : $('#etapa-2').val()}
@@ -243,7 +243,7 @@
         });
       }else{
         $.ajax({
-          url: '/teste/modificar-etapas/deletar',
+          url: '/modificar-etapas/deletar',
           type: 'POST',
           data: {'vaga': $('#id-vaga').val(), 'etapa' : $('#etapa-2').val()}
         }).done(function(data){
@@ -253,7 +253,7 @@
       }
       if($('#etapa-3').is(":checked") == true){
         $.ajax({
-          url: '/teste/modificar-etapas',
+          url: '/modificar-etapas',
           type: 'POST',
           data: {'vaga': $('#id-vaga').val(), 'ordem': $('#etapa-3-posicao').val(),
           'etapa' : $('#etapa-3').val(), 'prova': $('#prova').val(), 'data-limite' : $("#data-limite").val()}
@@ -263,7 +263,7 @@
         });
       }else{
         $.ajax({
-          url: '/teste/modificar-etapas/deletar',
+          url: '/modificar-etapas/deletar',
           type: 'POST',
           data: {'vaga': $('#id-vaga').val(), 'etapa' : $('#etapa-3').val(), 'prova': $('#prova').val()}
         }).done(function(data){
@@ -277,7 +277,7 @@
       }
       if($('#etapa-4').is(":checked") == true){
         $.ajax({
-          url: '/teste/modificar-etapas',
+          url: '/modificar-etapas',
           type: 'POST',
           data: {'vaga': $('#id-vaga').val(), 'ordem': $('#etapa-4-posicao').val(),
           'etapa' : $('#etapa-4').val()}
@@ -287,7 +287,7 @@
         });
       }else{
         $.ajax({
-          url: '/teste/modificar-etapas/deletar',
+          url: '/modificar-etapas/deletar',
           type: 'POST',
           data: {'vaga': $('#id-vaga').val(), 'etapa' : $('#etapa-4').val()}
         }).done(function(data){
@@ -297,7 +297,7 @@
       }
       if($('#etapa-5').is(":checked") == true){
         $.ajax({
-          url: '/teste/modificar-etapas',
+          url: '/modificar-etapas',
           type: 'POST',
           data: {'vaga': $('#id-vaga').val(), 'ordem': $('#etapa-5-posicao').val(),
           'etapa' : $('#etapa-5').val()}
@@ -307,7 +307,7 @@
         });
       }else{
         $.ajax({
-          url: '/teste/modificar-etapas/deletar',
+          url: '/modificar-etapas/deletar',
           type: 'POST',
           data: {'vaga': $('#id-vaga').val(), 'etapa' : $('#etapa-5').val()}
         }).done(function(data){

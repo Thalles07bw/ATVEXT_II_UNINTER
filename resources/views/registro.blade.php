@@ -8,15 +8,15 @@
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="resources/css/fontawesome-free/all.min.css">
+    <link rel="stylesheet" href="/css/fontawesome-free/all.min.css">
     <!-- icheck bootstrap -->
-    <link rel="stylesheet" href="resources/css/icheck-bootstrap.min.css">
+    <link rel="stylesheet" href="/css/icheck-bootstrap.min.css">
     <!--select2-->
     <link rel="stylesheet" href="vendor/select2/select2/dist/css/select2.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="resources/css/adminlte.min.css">
+    <link rel="stylesheet" href="/css/adminlte.min.css">
     <!-- css adicional -->
-    <link rel="stylesheet" href="resources/css/app.css">
+    <link rel="stylesheet" href="/css/app.css">
   </head>
   </head>
   <body>
@@ -168,7 +168,7 @@
               </div>
             </form>
 
-            <a href="/teste/login" class="text-center">Eu já tenho um registro</a>
+            <a href="/login" class="text-center">Eu já tenho um registro</a>
           </div>
           <!-- /.form-box -->
         </div><!-- /.card -->
@@ -176,11 +176,11 @@
     </div>
   </body>
   <footer>
-    <script src="resources/js/jquery/jquery.min.js"></script>
+    <script src="/js/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="vendor/select2/select2/dist/js/select2.min.js"></script>
     <!--Mascaras-->
     <script src="vendor/igorescobar/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
-    <script src="resources/js/validation/valida-registro.js"></script>
+    <script src="/js/validation/valida-registro.js"></script>
     <script type="text/javascript">
     $("#busca-cep").on('click', function(e){
       e.preventDefault();

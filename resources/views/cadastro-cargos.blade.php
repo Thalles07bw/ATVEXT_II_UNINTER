@@ -362,14 +362,14 @@ $(document).ready(function() {
 
       }else{
         $.ajax({
-          url: '/teste/cadastro-cargos/editar',
+          url: '/cadastro-cargos/editar',
           type: 'POST',
           data: data
         }).done(function(data){
           data = JSON.parse(data);
           $('.success-alert-text').html('');
           $('.success-alert-text').html(data['mensagem']);
-          $("#redirect-alert").attr("href", "/teste/cadastro-cargos");
+          $("#redirect-alert").attr("href", "/cadastro-cargos");
           $('#alert-ok').show();
 
         });
@@ -380,7 +380,7 @@ $(document).ready(function() {
       e.preventDefault();
       var id = $('#id-delete').val();
       $.ajax({
-        url: '/teste/cadastro-cargos/deletar/' + id,
+        url: '/cadastro-cargos/deletar/' + id,
         method: 'POST',
         data: {'id': id},
         success: function(data){
@@ -449,7 +449,7 @@ $(document).ready(function() {
 
       }else{
         $.ajax({
-          url: '/teste/cadastro-cargos',
+          url: '/cadastro-cargos',
           type: 'POST',
           data: data
         }).done(function(data){
@@ -457,7 +457,7 @@ $(document).ready(function() {
           console.log(data);
           $('.success-alert-text').html('');
           $('.success-alert-text').html(data['mensagem']);
-          $("#redirect-alert").attr("href", "/teste/cadastro-cargos");
+          $("#redirect-alert").attr("href", "/cadastro-cargos");
           $('#alert-ok').show();
 
         });
@@ -482,7 +482,7 @@ $(document).ready(function() {
           id = id.slice(13);
           $('#id-editar').val(id);
           $.ajax({
-            url: '/teste/cadastro-cargos/visualizar/' + id,
+            url: '/cadastro-cargos/visualizar/' + id,
             method: 'POST',
             data: {'id': id}
           }).done(function(data){
@@ -507,7 +507,7 @@ $(document).ready(function() {
           id = id.slice(10);
       
           $.ajax({
-            url: '/teste/cadastro-cargos/visualizar/' + id,
+            url: '/cadastro-cargos/visualizar/' + id,
             method: 'POST',
             data: {'id': id}
           }).done(function(data){

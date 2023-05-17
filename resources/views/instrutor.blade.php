@@ -150,10 +150,10 @@
               @foreach($tabela as $linha)
               <tr style="text-align: center;">
                 <td style="width: 10%;"><img id="foto-click-{{$linha->id_instrutor}}" 
-                src="/teste/storage/app/images/teachers/{{$linha->foto_instrutor}}" 
+                src="/storage/app/images/teachers/{{$linha->foto_instrutor}}" 
                 width="70px" height="70px" style="border-radius: 50%; cursor: pointer"
-                onmouseover="this.src='/teste/storage/app/images/teachers/change.png'; this.style.opacity=0.5"
-								onmouseout="this.src='/teste/storage/app/images/teachers/{{$linha->foto_instrutor}}'; this.style.opacity=1"
+                onmouseover="this.src='/storage/app/images/teachers/change.png'; this.style.opacity=0.5"
+								onmouseout="this.src='/storage/app/images/teachers/{{$linha->foto_instrutor}}'; this.style.opacity=1"
                 >
                 <form id="troca-foto-{{$linha->id_instrutor}}">
 										@csrf
@@ -447,7 +447,7 @@ $(document).ready(function(){
       }
       else{
         $.ajax({
-          url: "/teste/instrutores",
+          url: "/instrutores",
           type: 'post',
           data: data
           
@@ -457,7 +457,7 @@ $(document).ready(function(){
           if(data["flag"] == true){
             $('.success-alert-text').html('');
             $('.success-alert-text').html(data['mensagem']);
-            $("#redirect-alert").attr("href", "/teste/instrutores");
+            $("#redirect-alert").attr("href", "/instrutores");
             $('#alert-ok').show();
           }else{
             $('.error-alert-text').html('');
@@ -564,7 +564,7 @@ $(document).ready(function(){
     }
     else{
       $.ajax({
-        url: "/teste/instrutores/editar",
+        url: "/instrutores/editar",
         type: 'post',
         data: data
         
@@ -585,7 +585,7 @@ $(document).ready(function(){
     e.preventDefault();
     var id = $('#id-desativar').val();
     $.ajax({
-      url: '/teste/instrutores/desativar/' + id,
+      url: '/instrutores/desativar/' + id,
       method: 'POST',
       data: {'id': id},
       success: function(data){
@@ -615,7 +615,7 @@ $(document).ready(function(){
     form_data.append("photo", photo);
 		
 			$.ajax({
-				url:'/teste/atualiza-foto-instrutor',
+				url:'/atualiza-foto-instrutor',
 				method: 'post',
 				dataType: 'script',
       	cache: false,
@@ -667,7 +667,7 @@ function formControlReset(){
         $('#id-editar').val(id);
         $('#editar').modal('show');
         $.ajax({
-          url: '/teste/instrutores/visualizar/' + id,
+          url: '/instrutores/visualizar/' + id,
           method: 'POST',
           data: {'id': id}
         }).done(function(data){

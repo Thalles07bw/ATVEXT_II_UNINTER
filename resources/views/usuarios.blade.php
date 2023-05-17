@@ -58,7 +58,7 @@
       <div class="card shadow col-md-12">
         <div class="card-header py-3">
             <span><h4>Usuários cadastrados</h4><a class="btn btn-primary" style="float: right;"
-            href="/teste/usuarios-inativos">Ver usuários inativos</a></span>
+            href="/usuarios-inativos">Ver usuários inativos</a></span>
 
         </div>
         <div class="card-body">
@@ -184,7 +184,7 @@ $(document).ready(function(){
         let data = $('#cadastro-usuario').serialize();
 
         $.ajax({
-          url: '/teste/usuarios',
+          url: '/usuarios',
           method: 'post',
           data: data
         }).done(function(data){
@@ -194,7 +194,7 @@ $(document).ready(function(){
           if(data['flag'] == true){
             $('.success-alert-text').html('');
             $('.success-alert-text').html(data['mensagem']);
-            $("#redirect-alert").attr("href", "/teste/usuarios");
+            $("#redirect-alert").attr("href", "/usuarios");
             $('#alert-ok').show();
 
           }else{
@@ -249,7 +249,7 @@ $(document).ready(function(){
       
       console.log(data);
       $.ajax({
-        url: '/teste/usuarios/editar',
+        url: '/usuarios/editar',
         method: 'post',
         data: data
       }).done(function(data){
@@ -257,7 +257,7 @@ $(document).ready(function(){
         console.log(data);
         $('.success-alert-text').html('');
         $('.success-alert-text').html(data['mensagem']);
-        $("#redirect-alert").attr("href", "/teste/usuarios");
+        $("#redirect-alert").attr("href", "/usuarios");
         $('#alert-ok').show();
       })
     }
@@ -269,7 +269,7 @@ $(document).ready(function(){
     e.preventDefault();
     var id = $('#id-desativar').val();
     $.ajax({
-      url: '/teste/usuarios/desativar/' + id,
+      url: '/usuarios/desativar/' + id,
       method: 'POST',
       data: {'id': id},
       success: function(data){
@@ -305,7 +305,7 @@ $(document).ready(function(){
         id = id.slice(13);
         $('#id-editar').val(id);
         $.ajax({
-          url: '/teste/usuarios/visualizar/' + id,
+          url: '/usuarios/visualizar/' + id,
           method: 'POST',
           data: {'id': id}
         }).done(function(data){

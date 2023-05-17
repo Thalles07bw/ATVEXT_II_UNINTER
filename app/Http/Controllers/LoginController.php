@@ -57,10 +57,10 @@ class LoginController extends Controller
         $_SESSION['tipo_empresa'] = $empresa->id_tipo_cliente;
         
         if($dados->id_perfil_usuario == 1){
-            header ("Location: /teste/principal");
+            header ("Location: /principal");
             exit;
         }else{
-            header ("Location: /teste/percentual-treinamento");
+            header ("Location: /percentual-treinamento");
             exit;
         }
     }

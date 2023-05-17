@@ -48,10 +48,10 @@ use App\Http\Controllers\PdfController;
 
 Route::get('/', function(){
     if(isset($_SESSION['id_usuario'])){
-        header("Location: /teste/principal");
+        header("Location: /principal");
         exit;
     }else{
-        header("Location: /teste/login");
+        header("Location: /login");
         exit;
     }
 });
@@ -325,7 +325,7 @@ Route::post('/cadastrar-empresa/editar', [EmpresasController::class, 'edit']);
 /**************************************Logout*****************************************************/
 Route::get('/logout', function(){
     session_destroy();
-    header("Location: /teste/login");
+    header("Location: /login");
     exit;
 });
 /*************************************************************************************************/
@@ -385,7 +385,7 @@ Route::get('/avaliacoes-candidato', [AvaliacaoCandidatoController::class, 'show'
 
 Route::get('/logout-candidato', function(){
     session_destroy();
-    header("Location: /teste/login-candidato");
+    header("Location: /login-candidato");
     exit;
 });
 

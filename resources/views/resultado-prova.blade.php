@@ -43,7 +43,7 @@
           <h5>- Em caso de aprovação nesta etapa do processo seletivo entraremos em contato.</h5>
           <br>
           <div class="row">
-            <a  href="/teste/login-candidato" class="btn btn-primary" style="margin-left: 2px; margin-bottom: 2px;">Finalizar Avaliação</a>  
+            <a  href="/login-candidato" class="btn btn-primary" style="margin-left: 2px; margin-bottom: 2px;">Finalizar Avaliação</a>  
           </div>     
         </div>
       </div>
