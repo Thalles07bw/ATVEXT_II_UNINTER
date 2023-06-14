@@ -368,8 +368,10 @@ class CurriculoController extends Controller
                 $extension = $request->photo->extension();
                 if($extension == 'png' || $extension == 'jpg' || $extension == 'jpge'){
                     $filename = strtotime(date('Y-M-d H:i:s'));          
-                    $path = $request->photo->storeAs('images/users', $filename.'.'.$extension);  
-    
+                    $path = $request->photo->storeAs('public/images/users', $filename.'.'.$extension);  
+                    
+                    $path = str_replace('public','/storage', $path);
+                    
                     $ClasseCurriculo->atualizaFoto($path);
                 }else{
                     echo json_encode('Formato de Foto inválido');

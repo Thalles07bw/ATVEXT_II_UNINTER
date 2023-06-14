@@ -209,7 +209,7 @@ class ClasseCurriculo{
   }
 
   public function atualizaFoto($caminho){
-    $caminho = '/storage/app/'.$caminho;
+    $caminho = $caminho;
 
     $resposta = DB::update("UPDATE tb_candidato SET foto_candidato = ?  WHERE 
     id_usuario_candidato = ?", [$caminho, $_SESSION['id_usuario_candidato']]);

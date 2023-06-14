@@ -640,7 +640,7 @@ class ClasseTreinamento{
 
   public function percentualTreinamentoConcluido ($id_treinamento){
 
-    $resposta = DB::select('SELECT total.id_treinamento,total.descricao_treinamento, (dadas.qtd/total.qtd)*100 as percentual
+    $resposta = DB::select("SELECT total.id_treinamento,total.descricao_treinamento, (dadas.qtd/total.qtd)*100 as percentual
     FROM
     (
     SELECT
@@ -652,7 +652,7 @@ class ClasseTreinamento{
     INNER JOIN tb_aula a 
     ON
       t.id_treinamento = a.id_treinamento
-    GROUP BY t.id_treinamento
+    GROUP BY t.id_treinamento, t.descricao_treinamento
     ) AS total,
     (SELECT
       t.id_treinamento,
@@ -665,9 +665,9 @@ class ClasseTreinamento{
       t.id_treinamento = a.id_treinamento
     WHERE
       a.aula_dada = 1
-    GROUP BY t.id_treinamento) AS dadas
+    GROUP BY t.id_treinamento,t.descricao_treinamento) AS dadas
     WHERE dadas.descricao_treinamento = total.descricao_treinamento
-    AND total.id_treinamento = ?', [$id_treinamento]);
+    AND total.id_treinamento = ?", [$id_treinamento]);
 
     return $resposta;
   }
@@ -700,7 +700,7 @@ class ClasseTreinamento{
       INNER JOIN 
       tb_aula ta on
         ta.id_treinamento = tt.id_treinamento 
-      GROUP BY tc.id_colaborador, tt.id_treinamento) as total
+      GROUP BY tc.id_colaborador, tc.nome_colaborador, tc.id_usuario,tt.id_treinamento) as total
       INNER JOIN
       (SELECT
         tc.id_colaborador,
@@ -717,7 +717,7 @@ class ClasseTreinamento{
       INNER JOIN tb_treinamento tt ON
         tt.id_treinamento = ta.id_treinamento 
       WHERE tpa.status_aluno = 1
-      GROUP BY tc.id_colaborador, tt.id_treinamento) as parcial  
+      GROUP BY tc.id_colaborador, tc.nome_colaborador, tc.id_usuario,tt.id_treinamento) as parcial  
       ON total.id_colaborador = parcial.id_colaborador AND total.id_treinamento = parcial.id_treinamento
       LEFT JOIN
       (SELECT taa.caminho_arquivo, tc.id_colaborador  FROM tb_arquivos_armazenados as taa INNER JOIN tb_colaborador tc  ON tc.id_colaborador = taa.id_aluno

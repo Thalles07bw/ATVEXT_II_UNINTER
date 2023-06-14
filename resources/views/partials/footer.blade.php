@@ -4,8 +4,7 @@
           <footer class="sticky-footer bg-white">
             <div class="container my-auto">
               <div class="copyright text-center my-auto">
-                <span>Copyright &copy; CNPJ: 22.113.898/0001-47 desenvolvido por Minas Analytics</span>
-              </div>
+              <span>Copyright &copy; Desenvolvido por Thalles Silva de Freitas</span>
             </div>
           </footer>
           <!-- End of Footer -->
@@ -152,7 +151,7 @@
     <!--ChartJS local-->
     <script src="/js/graficos/graficos-principal.js"></script>
     <!--Máscaras-->
-    <script type="text/javascript" src="vendor/igorescobar/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+    <script type="text/javascript" src="{{asset('js/js-mask/jquery.mask.min.js')}}"></script>
     <!--Local Javascript-->
     <script src="/js/function/function.js"></script>
 

@@ -206,10 +206,10 @@
              
               <tr style="text-align: center;">
                 <td style="width: 10%;"><img id="foto-click-{{$each->id_colaborador}}" 
-                src="/storage/app/images/employees/{{$each->foto_colaborador}}" 
+                src="/storage/images/employees/{{$each->foto_colaborador}}" 
                 width="70px" height="70px" style="border-radius: 50%; cursor: pointer"
-                onmouseover="this.src='/storage/app/images/employees/change.png'; this.style.opacity=0.5"
-								onmouseout="this.src='/storage/app/images/employees/{{$each->foto_colaborador}}'; this.style.opacity=1"
+                onmouseover="this.src='/storage/images/employees/change.png'; this.style.opacity=0.5"
+								onmouseout="this.src='/storage/images/employees/{{$each->foto_colaborador}}'; this.style.opacity=1"
                 >
                 <form id="troca-foto-{{$each->id_colaborador}}">
 										@csrf

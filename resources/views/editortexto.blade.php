@@ -10,7 +10,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title>Basis | {{$nome_pagina}}</title>
+    <title>Quero Trampar | {{$nome_pagina}}</title>
 
 <head>
     <!-- Custom styles for this template-->

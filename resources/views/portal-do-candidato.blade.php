@@ -17,7 +17,7 @@
 								<img  id="foto-click" src="{{$dados_candidato->foto_candidato}}" 
 								alt="User profile picture" width="128px" height="128px" style="border-radius: 50%; 
 								cursor: pointer" 
-								onmouseover="this.src='/storage/app/images/users/change.png'; this.style.opacity=0.5"
+								onmouseover="this.src='/storage/images/users/change.png'; this.style.opacity=0.5"
 								onmouseout="this.src='{{$dados_candidato->foto_candidato}}'; this.style.opacity=1">
 								<form id="troca-foto">
 										@csrf

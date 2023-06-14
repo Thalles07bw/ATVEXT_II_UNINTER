@@ -109,6 +109,7 @@ class ColaboradorController extends Controller
 
     public static function updatePhoto(Request $request){
 
+
         $ClasseAutenticacao = new ClasseAutenticacao();
         $ClasseAutenticacao->checaAutenticacao();
 
@@ -118,7 +119,7 @@ class ColaboradorController extends Controller
                 $extension = $request->photo->extension();
                 if($extension == 'png' || $extension == 'jpg' || $extension == 'jpge'){
                     $filename = strtotime(date('Y-M-d H:i:s'));          
-                    $request->photo->storeAs('images/employees', $filename.'.'.$extension);  
+                    $request->photo->storeAs('public/images/employees', $filename.'.'.$extension);  
                     $id = $request->input('id');
                     $ClasseColaborador->atualizaFoto($id, $filename.'.'.$extension);
                 }else{

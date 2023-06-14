@@ -10,7 +10,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title>Basis | {{$nome_pagina}}</title>
+    <title>Quero Trampar | {{$nome_pagina}}</title>
 
     <!--Favicon-->
     <link
@@ -56,7 +56,6 @@
             <img src="../resources/img/logo.png" width=50px>
           </div>
           <div class="sidebar-brand-text mx-3" style="color: orange">
-            <img src="../resources/img/logo_letras.png" width=50px>
           </div>
         </a>
 

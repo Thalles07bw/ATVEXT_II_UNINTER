@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Basis | Login</title>
+    <title>Quero Trampar | Login</title>
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback">
     <!-- Font Awesome -->
@@ -11,6 +11,11 @@
     <link rel="stylesheet" href="/css/icheck-bootstrap.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="/css/adminlte.min.css">
+    <style>
+      body{
+        background-color: orangered !important;
+      }
+    </style>
   </head>
   @if($message ?? '')
   <div class="alert alert-danger alert-dismissible fade show" role="alert" >
@@ -25,9 +30,7 @@
     <!-- /.login-logo -->
       <div class="card card-outline card-orange">
       <div class="card-header text-center">
-        <a href="https://basis.com.br" class="h1">
         <img src="/img/logo.png" width="80px"></img>
-        <img src="/img/logo_letras.png" width="80px"></img>
       </a>
       </div>
 

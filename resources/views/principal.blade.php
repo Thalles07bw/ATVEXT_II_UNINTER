@@ -3,10 +3,6 @@
     <body>
         <!-- Begin Page Content -->
         <div class="container-fluid">
-            <!-- Page Heading -->
-            <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                <h1 class="h3 mb-0 text-gray-800 ">{{$nome_da_empresa}}</h1>
-            </div>
             <!-- Conteudo do site -->
             <div class="row">
                 <!-- Earnings (Monthly) Card Example -->

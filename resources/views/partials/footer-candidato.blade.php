@@ -4,7 +4,7 @@
           <footer class="sticky-footer bg-white">
             <div class="container my-auto">
               <div class="copyright text-center my-auto">
-                <span>Copyright &copy; CNPJ: 22.113.898/0001-47 desenvolvido por Minas Analytics</span>
+                <span>Copyright &copy; Desenvolvido por Thalles Silva de Freitas</span>
               </div>
             </div>
           </footer>
