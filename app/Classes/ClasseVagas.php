@@ -12,8 +12,16 @@ class ClasseVagas{
 
     return $resposta;
   }
+
   public function buscaStatusVaga(){
     $resposta = DB::table('tb_status_vaga')->get();
+    return $resposta;
+  }
+
+  public function buscaVagasAtivas(){
+    $resposta = DB::select('SELECT t.id_vaga, t.titulo_vaga, t.descricao_vaga, c.nome_cargo, c.id_empresa, tec.razao_social_empresa_contratante , t.prazo_processo_seletivo, c.piso_salarial_cargo
+    FROM tb_vaga t, tb_cargo c, tb_empresa_contratante tec  WHERE t.id_cargo = c.id_cargo AND tec.id_empresa_contratante = c.id_empresa  AND prazo_processo_seletivo >= current_date');
+
     return $resposta;
   }
 

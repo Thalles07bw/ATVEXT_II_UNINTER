@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Classes\ClasseCurriculo;
 use App\Classes\ClasseLocais;
 use App\Classes\ClasseProva;
+use App\Classes\ClasseVagas;
 
 class PortalCandidatoController extends Controller
 {
@@ -12,9 +13,12 @@ class PortalCandidatoController extends Controller
         $ClasseCurriculo = new ClasseCurriculo();
         $ClasseLocais = new ClasseLocais();
         $ClasseProva = new ClasseProva();
+        $ClasseVaga = new ClasseVagas();
         if(isset($_SESSION['id_usuario_candidato'])){
-            $curriculoCandidato = $ClasseCurriculo->buscaDadosCurriculo($_SESSION['id_usuario_candidato']);
             
+            $curriculoCandidato = $ClasseCurriculo->buscaDadosCurriculo($_SESSION['id_usuario_candidato']);
+            $vagas = $ClasseVaga->buscaVagasAtivas();
+
             if(isset($curriculoCandidato)){
                 $cidade = $ClasseLocais->buscaCidadePorId($curriculoCandidato->id_cidade);
                 $avaliacoes = $ClasseProva->contaProvasPendentesCandidato($_SESSION['id_usuario_candidato']);
@@ -25,7 +29,8 @@ class PortalCandidatoController extends Controller
                 'permissao' => $_SESSION['permissao_candidato'],
                 'dados_candidato' => $curriculoCandidato,
                 'cidade' => $cidade[0]->nome_cidade,
-                'provas_pendentes' => $avaliacoes
+                'provas_pendentes' => $avaliacoes,
+                'vagas' => $vagas
                 ]);
             }else{
                 header("Location: /curriculo");
