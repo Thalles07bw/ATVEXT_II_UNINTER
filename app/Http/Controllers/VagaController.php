@@ -139,7 +139,7 @@ class VagaController extends Controller
                 $extension = $request->logo->extension();
                 if($extension == 'png'){
                     $filename = strtotime(date('Y-M-d H:i:s'));          
-                    $path = $request->logo->storeAs('images', $filename.'.'.$extension);        
+                    $path = $request->logo->storeAs('public/images', $filename.'.'.$extension);        
                     
                 }else{
                     echo json_encode('Formato de Logo inválido');
@@ -151,6 +151,7 @@ class VagaController extends Controller
         }else{
             $path = NULL;
         }
+
         $cor = $request->input('cor');
         $linkedin = $request->input('linkedin');
         $facebook = $request->input('facebook');
@@ -186,7 +187,7 @@ class VagaController extends Controller
 
                 if($extension == 'png'){
                     $filename = strtotime(date('Y-M-d H:i:s'));          
-                    $path = $request->file('logo-edit')->storeAs('images', $filename.'.'.$extension); 
+                    $path = $request->file('logo-edit')->storeAs('public/images', $filename.'.'.$extension); 
                 }else{
                     echo json_encode('Formato de Logo inválido');
                 }
