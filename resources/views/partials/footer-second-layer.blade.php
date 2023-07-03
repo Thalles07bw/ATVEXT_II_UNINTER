@@ -63,27 +63,27 @@
     </div>
 
     <!-- JQuery 3.6-->
-    <script src="../resources/js/jquery/jquery.min.js"></script>
+    <script src="../js/jquery/jquery.min.js"></script>
     <!--Bootstrap 4.3.1-->
-    <script src="../resources/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
     <!--select2-->
-    <script src="../resources/js/select2/select2.full.min.js"></script>
+    <script src="../js/select2/select2.full.min.js"></script>
     <!--Sweet Alert2-->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Core plugin JavaScript-->
-    <script src="../resources/js/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../js/jquery-easing/jquery.easing.min.js"></script>
     <!-- Custom scripts for all pages-->
-    <script src="../resources/js/sb-admin/sb-admin-2.min.js"></script>
+    <script src="../js/sb-admin/sb-admin-2.min.js"></script>
     <!--Gráficos-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
     <!--Summernote-->
-    <script src="../resources/js/summernote/summernote.js"></script>
-    <script src="../resources/js/summernote/dist_lang_summernote-pt-BR.js"></script>
+    <script src="../js/summernote/summernote.js"></script>
+    <script src="../js/summernote/dist_lang_summernote-pt-BR.js"></script>
     <!--Datatables-->
     <script src="//cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
     <!--ChartJS local-->
-    <script src="../resources/js/graficos/grafico-pizza.js"></script>
+    <script src="../js/graficos/grafico-pizza.js"></script>
     <!--Local Javascript-->
-    <script src="../resources/js/function/function.js"></script>
+    <script src="../js/function/function.js"></script>
   </body>
 </html>

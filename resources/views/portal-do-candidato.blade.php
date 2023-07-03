@@ -1,6 +1,10 @@
 <html>
 @include('partials.header-candidato')
-
+<style>
+	.dataTables_wrapper {
+      float: left;
+    }
+</style>
 <body>
   <!-- Begin Page Content -->
 	<div class="container-fluid">
@@ -49,8 +53,34 @@
 						<h5>Vagas para você</h5>
 					</div>
 					<div class="card-body">
-						<div class="col-md-6" style="font-size: 18px;">
+						<div class="col-md-12" style="font-size: 18px;">		
+						<table id='tabela-vagas-candidato'>
+							<thead>
+								<tr>
+									<th>ID Vaga</th>
+									<th>Título Vaga</th>
+									<th>Empresa</th>
+									<th>Encerra em</th>
+									<th>Piso Salarial</th>
+									<th>Ações</th>
+								</tr>
+							</thead>
+							<tbody>
+							@foreach($vagas as $vaga)
+							<tr>
+								<td>{{$vaga->id_vaga}}</td>
+								<td>{{$vaga->titulo_vaga}}</td>
+								<td>{{$vaga->razao_social_empresa_contratante}}</td>
+								<td>{{date('d/m/Y', strtotime($vaga->prazo_processo_seletivo))}}</td>
+								<td>{{$vaga->piso_salarial_cargo}}</td>
+								<td><a href="/mural-vagas/{{$vaga->id_empresa}}" class="btn btn-primary">Ir para mural</a></td>
+							</tr>
+							@endforeach
+							</tbody>
+							<tfoot>
 
+							</tfoot>
+						</table>
 						</div>
 					</div>
 				</div>
@@ -61,6 +91,26 @@
 <br>
 @include('partials.footer-candidato')
 <script type="text/javascript">
+
+	$('#tabela-vagas-candidato').dataTable({
+		"lengthChange": false,
+		"language": {
+			"lengthMenu": "Mostrando _MENU_ resultado por página",
+			"zeroRecords": "Nenhum registro encontrado",
+			"info": "Mostrando página _PAGE_ de _PAGES_",
+			"infoEmpty": "Não há registros nessas condições",
+			"infoFiltered": "(Filtrando de  _MAX_ registros)",
+			"search":         "Busca:",
+			"paginate": {
+				"first":      "Primeira página",
+				"last":       "Última página",
+				"next":       "Próxima",
+				"previous":   "Anterior"
+			},
+	
+		} 
+	});
+
 	  $("#foto-click").on('click', function() {
       $("#FileInput" ).click();
     });

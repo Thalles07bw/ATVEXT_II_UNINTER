@@ -100,7 +100,7 @@
                       @if($each->logo == '')
                       <td>Não Cadastrado</td>
                       @else
-                      <td><a href="/storage/app/{{$each->logo}}">Clique para visualizar</a></td>
+                      <td><a href="{{asset(str_replace('public','storage',$each->logo))}}">Clique para visualizar</a></td>
                       @endif
                       <td><input style="width: 25px; height: 25px;
                        border-radius: 50%; border-color: black ;background-color: {{$each->cor}}" disabled>

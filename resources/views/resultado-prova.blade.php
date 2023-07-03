@@ -21,11 +21,11 @@
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="../resources/css/fontawesome-free/all.min.css">
+    <link rel="stylesheet" href="../css/fontawesome-free/all.min.css">
     <!-- icheck bootstrap -->
-    <link rel="stylesheet" href="../resources/css/icheck-bootstrap.min.css">
+    <link rel="stylesheet" href="../css/icheck-bootstrap.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="../resources/css/adminlte.min.css">
+    <link rel="stylesheet" href="../css/adminlte.min.css">
 </head>
 <body class="top-navigation layout-navbar-fixed sidebar-closed sidebar-collapse" style="height: auto;">
   <div class="wrapper" >
@@ -51,9 +51,9 @@
   </div>
 </body>
 <!--JQuery-->
-<script src="../resources/js/jquery/jquery.min.js"></script>
+<script src="../js/jquery/jquery.min.js"></script>
 <!--Bootstrap 4.3.1-->
-<script src="../resources/js/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
   history.pushState(null, document.title, location.href);

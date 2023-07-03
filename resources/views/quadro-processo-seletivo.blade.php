@@ -167,7 +167,7 @@
   </div>
 </div>
 @include('partials.footer-second-layer')
-<script type="text/javascript" src="../resources/js/drag-and-drop/dnd.js"></script>
+<script type="text/javascript" src="../js/drag-and-drop/dnd.js"></script>
 <script type="text/javascript">
   $('#etapa-personalizada').on('click', function(){
     if($('#etapa-personalizada').prop('checked') == true){

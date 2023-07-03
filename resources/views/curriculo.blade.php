@@ -1,5 +1,6 @@
+
 <title>Curriculo_{{$nome}}</title>
-<div style="text-align: center;"><img src="../{{$foto}}" style="max-width: 115px; max-height: 115px; border-radius: 50%"></div>
+<div style="text-align: center;"><img src="{{substr($foto,1)}}" style="max-width: 115px; max-height: 115px; border-radius: 50%"></div>
 <h1 style="text-align:center">{{$nome}}</h1>
 <h3 style="text-align:center">{{$email}}</h3>
 <h3 style="text-align:center">{{$telefone}}</h3>
@@ -48,19 +49,19 @@
   <p style="text-align: left;">
   {{$habilidade->habilidade_candidato}} 
   @if($habilidade->nivel_habilidade_candidato == 1)
-  &nbsp;<img src="../storage/app/images/loading/estrela.png" style="max-width: 15px">
+  &nbsp;<img src="storage/images/loading/estrela.png" style="max-width: 15px">
   @endif
   @if($habilidade->nivel_habilidade_candidato == 2)
-  &nbsp;<img src="../storage/app/images/loading/estrela.png" style="max-width: 15px"><img src="../storage/app/images/loading/estrela.png" style="max-width: 15px">
+  &nbsp;<img src="storage/images/loading/estrela.png" style="max-width: 15px"><img src="storage/images/loading/estrela.png" style="max-width: 15px">
   @endif
   @if($habilidade->nivel_habilidade_candidato == 3)
-  &nbsp;<img src="../storage/app/images/loading/estrela.png" style="max-width: 15px"><img src="../storage/app/images/loading/estrela.png" style="max-width: 15px"><img src="../storage/app/images/loading/estrela.png" style="max-width: 15px">
+  &nbsp;<img src="storage/images/loading/estrela.png" style="max-width: 15px"><img src="storage/images/loading/estrela.png" style="max-width: 15px"><img src="storage/images/loading/estrela.png" style="max-width: 15px">
   @endif
   @if($habilidade->nivel_habilidade_candidato == 4)
-  &nbsp;<img src="../storage/app/images/loading/estrela.png" style="max-width: 15px"><img src="../storage/app/images/loading/estrela.png" style="max-width: 15px"><img src="../storage/app/images/loading/estrela.png" style="max-width: 15px"><img src="../storage/app/images/loading/estrela.png" style="max-width: 15px">
+  &nbsp;<img src="storage/images/loading/estrela.png" style="max-width: 15px"><img src="storage/images/loading/estrela.png" style="max-width: 15px"><img src="storage/images/loading/estrela.png" style="max-width: 15px"><img src="storage/images/loading/estrela.png" style="max-width: 15px">
   @endif
   @if($habilidade->nivel_habilidade_candidato == 5)
-  &nbsp;<img src="../storage/app/images/loading/estrela.png" style="max-width: 15px"><img src="../storage/app/images/loading/estrela.png" style="max-width: 15px"><img src="../storage/app/images/loading/estrela.png" style="max-width: 15px"><img src="../storage/app/images/loading/estrela.png" style="max-width: 15px"><img src="../storage/app/images/loading/estrela.png" style="max-width: 15px">
+  &nbsp;<img src="storage/images/loading/estrela.png" style="max-width: 15px"><img src="storage/images/loading/estrela.png" style="max-width: 15px"><img src="storage/images/loading/estrela.png" style="max-width: 15px"><img src="storage/images/loading/estrela.png" style="max-width: 15px"><img src="storage/images/loading/estrela.png" style="max-width: 15px">
   @endif
   </p>
   @endforeach
@@ -74,19 +75,19 @@
   <p style="text-align: left;">
   {{$idioma->idioma}} 
   @if($idioma->nivel_idioma_candidato == 1)
-  &nbsp;<img src="../storage/app/images/loading/estrela.png" style="max-width: 15px">
+  &nbsp;<img src="storage/images/loading/estrela.png" style="max-width: 15px">
   @endif
   @if($idioma->nivel_idioma_candidato == 2)
-  &nbsp;<img src="../storage/app/images/loading/estrela.png" style="max-width: 15px"><img src="../storage/app/images/loading/estrela.png" style="max-width: 15px">
+  &nbsp;<img src="storage/images/loading/estrela.png" style="max-width: 15px"><img src="storage/images/loading/estrela.png" style="max-width: 15px">
   @endif
   @if($idioma->nivel_idioma_candidato == 3)
-  &nbsp;<img src="../storage/app/images/loading/estrela.png" style="max-width: 15px"><img src="../storage/app/images/loading/estrela.png" style="max-width: 15px"><img src="../storage/app/images/loading/estrela.png" style="max-width: 15px">
+  &nbsp;<img src="storage/images/loading/estrela.png" style="max-width: 15px"><img src="storage/images/loading/estrela.png" style="max-width: 15px"><img src="storage/images/loading/estrela.png" style="max-width: 15px">
   @endif
   @if($idioma->nivel_idioma_candidato == 4)
-  &nbsp;<img src="../storage/app/images/loading/estrela.png" style="max-width: 15px"><img src="../storage/app/images/loading/estrela.png" style="max-width: 15px"><img src="../storage/app/images/loading/estrela.png" style="max-width: 15px"><img src="../storage/app/images/loading/estrela.png" style="max-width: 15px">
+  &nbsp;<img src="storage/images/loading/estrela.png" style="max-width: 15px"><img src="storage/images/loading/estrela.png" style="max-width: 15px"><img src="storage/images/loading/estrela.png" style="max-width: 15px"><img src="storage/images/loading/estrela.png" style="max-width: 15px">
   @endif
   @if($idioma->nivel_idioma_candidato == 5)
-  &nbsp;<img src="../storage/app/images/loading/estrela.png" style="max-width: 15px"><img src="../storage/app/images/loading/estrela.png" style="max-width: 15px"><img src="../storage/app/images/loading/estrela.png" style="max-width: 15px"><img src="../storage/app/images/loading/estrela.png" style="max-width: 15px"><img src="../storage/app/images/loading/estrela.png" style="max-width: 15px">
+  &nbsp;<img src="storage/images/loading/estrela.png" style="max-width: 15px"><img src="storage/images/loading/estrela.png" style="max-width: 15px"><img src="storage/images/loading/estrela.png" style="max-width: 15px"><img src="storage/images/loading/estrela.png" style="max-width: 15px"><img src="storage/images/loading/estrela.png" style="max-width: 15px">
   @endif
   </p>
   @endforeach

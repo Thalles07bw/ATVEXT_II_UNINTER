@@ -21,7 +21,7 @@
 
     <!-- Custom fonts for this template-->
     <link
-      href="../resources/css/fontawesome-free/all.min.css"
+      href="../css/fontawesome-free/all.min.css"
       rel="stylesheet"
       type="text/css"
     />
@@ -31,7 +31,7 @@
     />
 
     <!-- Custom styles for this template-->
-    <link href="../resources/css/sb-admin2/sb-admin-2.min.css" rel="stylesheet" />
+    <link href="../css/sb-admin2/sb-admin-2.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <!-- include summernote css/js -->
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
